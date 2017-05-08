@@ -734,8 +734,12 @@ worker = undefined
 \subsection*{Problema 3}
 
 \begin{code}
+--data B_tree a = Nil | Block  { leftmost :: B_tree a, block :: [(a, B_tree a)] } deriving (Show,Eq)
+
 inB_tree = undefined
-outB_tree = undefined
+
+outB_tree Nil = Left () 
+outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
 
 recB_tree f = undefined
 baseB_tree g f = undefined
