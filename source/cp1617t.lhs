@@ -736,7 +736,8 @@ worker = undefined
 \begin{code}
 --data B_tree a = Nil | Block  { leftmost :: B_tree a, block :: [(a, B_tree a)] } deriving (Show,Eq)
 
-inB_tree = undefined
+inB_tree :: Either () (B_tree a, [(a, B_tree a)]) -> B_tree a
+inB_tree = either (const Nil) (uncurry Block)
 
 outB_tree Nil = Left () 
 outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
