@@ -85,13 +85,13 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 33
 \\\hline
-a11111 & Nome1 (preencher)	
+a71841 & André Pinho
 \\
-a22222 & Nome2 (preencher)	
+a70363 & Hugo Gonçalves	
 \\
-a33333 & Nome3 (preencher)	
+a72362 & Miguel Costa
 \end{tabular}
 \end{center}
 
@@ -711,7 +711,16 @@ outras funções auxiliares que sejam necessárias.
 \subsection*{Problema 1}
 
 \begin{code}
-inv x = undefined
+inv x = p1 . for (split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))
+{-
+inv x 0 = 1
+
+inv x (n+1) = aux1 x n + inv x n
+
+aux1 x 0 =  (1-x)
+
+aux1 x (n+1) = (1-x) * aux1 x n 
+-}
 \end{code}
 
 \subsection*{Problema 2}
