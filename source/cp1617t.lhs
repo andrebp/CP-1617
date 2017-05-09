@@ -743,7 +743,9 @@ outB_tree Nil = Left ()
 outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
 
 recB_tree f = undefined
-baseB_tree g f = undefined
+
+baseB_tree g f = id -|- g >< map (f >< g)
+
 cataB_tree g = undefined
 anaB_tree g = undefined
 hyloB_tree f g = undefined
