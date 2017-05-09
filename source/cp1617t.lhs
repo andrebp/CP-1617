@@ -742,9 +742,10 @@ inB_tree = either (const Nil) (uncurry Block)
 outB_tree Nil = Left () 
 outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
 
-recB_tree f = undefined
+-- recB_tree f = id -|- f >< map (id >< f) 
+recB_tree f = baseB_tree id f
 
-baseB_tree g f = id -|- g >< map (f >< g)
+baseB_tree g f = id -|- f >< map (g >< f)
 
 cataB_tree g = undefined
 anaB_tree g = undefined
