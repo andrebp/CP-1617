@@ -754,7 +754,7 @@ anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g
 hyloB_tree f g = cataB_tree f . anaB_tree g
 
 instance Functor B_tree
-         where fmap f = undefined
+         where fmap f = cataB_tree ( inB_tree . baseB_tree f id )
 
 inordB_tree = undefined
 
