@@ -756,7 +756,7 @@ hyloB_tree f g = cataB_tree f . anaB_tree g
 instance Functor B_tree
          where fmap f = cataB_tree ( inB_tree . baseB_tree f id )
 
-inordB_tree = undefined
+inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 
 largestBlock = undefined
 
