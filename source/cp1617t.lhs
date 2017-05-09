@@ -747,9 +747,11 @@ recB_tree f = baseB_tree id f
 
 baseB_tree g f = id -|- f >< map (g >< f)
 
-cataB_tree g = undefined
-anaB_tree g = undefined
-hyloB_tree f g = undefined
+cataB_tree g = g . recB_tree(cataB_tree g) . outB_tree
+
+anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g 
+
+hyloB_tree f g = cataB_tree f . anaB_tree g
 
 instance Functor B_tree
          where fmap f = undefined
