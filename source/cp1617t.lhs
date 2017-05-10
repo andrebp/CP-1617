@@ -758,7 +758,7 @@ instance Functor B_tree
 
 inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 
-largestBlock = undefined
+largestBlock = cataB_tree (either (const 0) (uncurry max) . (id -|- id >< length))
 
 mirrorB_tree = undefined
 
