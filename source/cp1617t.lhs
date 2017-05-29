@@ -727,8 +727,11 @@ aux1 x (n+1) = (1-x) * aux1 x n
 \begin{code}
 wc_w_final :: [Char] -> Int
 wc_w_final = wrapper . worker
-wrapper = undefined
-worker = undefined
+wrapper = p1
+worker = cataList (split (either (const 0) aux ) (either (const True) (sep . p1)))
+         where 
+          sep = cond (\c -> c==' ' || c =='\n' || c=='\t' ) true false
+          aux = cond ( uncurry (&&) . (split (not . sep . p1) (p2 . p2))) (succ. p1 . p2) (p1 . p2)
 \end{code}
 
 \subsection*{Problema 3}
