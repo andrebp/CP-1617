@@ -791,15 +791,23 @@ cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
 \subsection*{Problema 4}
 
 \begin{code}
-anaA = undefined
+ 
+{-Tendo em conta as definições dos catamorfismos dadas, definir os anamorfismos correspondentes é uma tarefa bastante simples: -}
+recA g h = baseA id g h
+baseA f g h = f -|- g >< h
+anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga 
 
-anaB = undefined
+recB f = baseB id f
+baseB g f =  g -|- f
+anaB ga gb = inB . (recB (anaA ga gb)) . gb
+
 \end{code}
 
 \begin{code}
-generateAlgae = undefined 
 
-showAlgae = undefined
+generateAlgae = undefined
+
+showAlgae = cataA show show
 \end{code}
 
 \subsection*{Problema 5}
