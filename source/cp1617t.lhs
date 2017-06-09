@@ -777,9 +777,12 @@ lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
 qSortB_tree :: Ord t => [t] -> [t]
 qSortB_tree = inordB_tree . anaB_tree lsplitB_tree
 
-dotB_tree = undefined
+dotB_tree :: Show a => B_tree a -> IO ExitCode
+dotB_tree = dotpict . bmap nothing (Just . show) . cB_tree2Exp
 
-cB_tree2Exp = undefined
+cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
+              where f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
+              --where f (a,(b,c)) = Term b (a:c)
 \end{code}
 
 \subsection*{Problema 4}
