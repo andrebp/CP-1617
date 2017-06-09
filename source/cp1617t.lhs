@@ -807,7 +807,11 @@ anaB ga gb = inB . (recB (anaA ga gb)) . gb
 
 generateAlgae = undefined
 
-showAlgae = cataA show show
+showAlgae = cataA (either (const "") f) (either (const "") g)
+            where
+              f (a,b) = "A " ++ a ++ b
+              g a = "B " ++ a   
+
 \end{code}
 
 \subsection*{Problema 5}
