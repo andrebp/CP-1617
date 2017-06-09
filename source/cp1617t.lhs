@@ -734,8 +734,6 @@ worker = undefined
 \subsection*{Problema 3}
 
 \begin{code}
---data B_tree a = Nil | Block  { leftmost :: B_tree a, block :: [(a, B_tree a)] } deriving (Show,Eq)
-
 inB_tree :: Either () (B_tree a, [(a, B_tree a)]) -> B_tree a
 inB_tree = either (const Nil) (uncurry Block)
 
@@ -758,15 +756,26 @@ instance Functor B_tree
 
 inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 
-
 largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
                where f = (uncurry max) . (split length maximum) . (map p2)
 
-mirrorB_tree = undefined
+--mirrorB_tree = cataB_tree ( inB_tree . (id -|- (g . f) ). (id -|- id >< (unzip . reverse))) 
+mirrorB_tree = cataB_tree ( inB_tree . (id -|- ( (g . f) . (id >< (unzip . reverse)) ) )) 
+               where f (a , ([],[])) = (a,([],[]))
+                     f (a , (l, (h:t))) = (h,(l, t++[a]))
+                     g  = (id >< ( uncurry zip)) 
 
-lsplitB_tree = undefined
+lsplitB_tree [] = Left ()
+lsplitB_tree [h] = Right ([],[(h,[])])
+lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
+                        where a = uncurry min(h1,h2)
+                              b = uncurry max(h1,h2) 
+                              l = filter (<a) t
+                              tMax = filter (>b) t
+                              tMin = filter ((uncurry(&&)). split (>a) (<b)) t
 
-qSortB_tree = undefined
+qSortB_tree :: Ord t => [t] -> [t]
+qSortB_tree = inordB_tree . anaB_tree lsplitB_tree
 
 dotB_tree = undefined
 
