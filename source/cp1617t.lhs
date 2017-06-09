@@ -740,7 +740,6 @@ inB_tree = either (const Nil) (uncurry Block)
 outB_tree Nil = Left () 
 outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
 
--- recB_tree f = id -|- f >< map (id >< f) 
 recB_tree f = baseB_tree id f
 
 baseB_tree g f = id -|- f >< map (g >< f)
@@ -761,18 +760,18 @@ largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
 
 --mirrorB_tree = cataB_tree ( inB_tree . (id -|- (g . f) ). (id -|- id >< (unzip . reverse))) 
 mirrorB_tree = cataB_tree ( inB_tree . (id -|- ( (g . f) . (id >< (unzip . reverse)) ) )) 
-               where f (a , ([],[])) = (a,([],[]))
-                     f (a , (l, (h:t))) = (h,(l, t++[a]))
-                     g  = (id >< ( uncurry zip)) 
+               where 
+                f (a , ([],[])) = (a,([],[]))
+                f (a , (l, (h:t))) = (h,(l, t++[a]))
+                g  = (id >< ( uncurry zip)) 
 
 lsplitB_tree [] = Left ()
 lsplitB_tree [h] = Right ([],[(h,[])])
 lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
-                        where a = uncurry min(h1,h2)
-                              b = uncurry max(h1,h2) 
-                              l = filter (<a) t
-                              tMax = filter (>b) t
-                              tMin = filter ((uncurry(&&)). split (>a) (<b)) t
+                        where 
+                          (a,b) = (split (uncurry min) (uncurry max) ) (h1,h2)
+                          (tMin,tMax) = (split (filter ((uncurry(&&)). split (>a) (<b))) (filter (>b)) ) t
+                          l = filter (<a) t
 
 qSortB_tree :: Ord t => [t] -> [t]
 qSortB_tree = inordB_tree . anaB_tree lsplitB_tree
@@ -781,8 +780,9 @@ dotB_tree :: Show a => B_tree a -> IO ExitCode
 dotB_tree = dotpict . bmap nothing (Just . show) . cB_tree2Exp
 
 cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
-              where f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
-              --where f (a,(b,c)) = Term b (a:c)
+              where 
+                f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
+              --f (a,(b,c)) = Term b (a:c)
 \end{code}
 
 \subsection*{Problema 4}
