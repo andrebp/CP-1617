@@ -761,12 +761,11 @@ inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
                where f = (uncurry max) . (split length maximum) . (map p2)
 
---mirrorB_tree = cataB_tree ( inB_tree . (id -|- (g . f) ). (id -|- id >< (unzip . reverse))) 
-mirrorB_tree = cataB_tree ( inB_tree . (id -|- ( (g . f) . (id >< (unzip . reverse)) ) )) 
+mirrorB_tree = anaB_tree ((id -|- ( (g . f) . (id >< (unzip . reverse)) ) ). outB_tree) 
                where 
                 f (a , ([],[])) = (a,([],[]))
                 f (a , (l, (h:t))) = (h,(l, t++[a]))
-                g  = (id >< ( uncurry zip)) 
+                g  = (id >< ( uncurry zip))  
 
 lsplitB_tree [] = Left ()
 lsplitB_tree [h] = Right ([],[(h,[])])
