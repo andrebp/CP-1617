@@ -737,31 +737,55 @@ worker = cataList (split (either (const 0) aux ) (either (const True) (sep . p1)
 \subsection*{Problema 3}
 
 \begin{code}
-inB_tree = undefined
-outB_tree = undefined
+inB_tree :: Either () (B_tree a, [(a, B_tree a)]) -> B_tree a
+inB_tree = either (const Nil) (uncurry Block)
 
-recB_tree f = undefined
-baseB_tree g f = undefined
-cataB_tree g = undefined
-anaB_tree g = undefined
-hyloB_tree f g = undefined
+outB_tree Nil = Left () 
+outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
+
+recB_tree f = baseB_tree id f
+
+baseB_tree g f = id -|- f >< map (g >< f)
+
+cataB_tree g = g . recB_tree(cataB_tree g) . outB_tree
+
+anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g 
+
+hyloB_tree f g = cataB_tree f . anaB_tree g
 
 instance Functor B_tree
-         where fmap f = undefined
+         where fmap f = cataB_tree ( inB_tree . baseB_tree f id )
 
-inordB_tree = undefined
+inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 
-largestBlock = undefined
+largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
+               where f = (uncurry max) . (split length maximum) . (map p2)
 
-mirrorB_tree = undefined
+--mirrorB_tree = cataB_tree ( inB_tree . (id -|- (g . f) ). (id -|- id >< (unzip . reverse))) 
+mirrorB_tree = cataB_tree ( inB_tree . (id -|- ( (g . f) . (id >< (unzip . reverse)) ) )) 
+               where 
+                f (a , ([],[])) = (a,([],[]))
+                f (a , (l, (h:t))) = (h,(l, t++[a]))
+                g  = (id >< ( uncurry zip)) 
 
-lsplitB_tree = undefined
+lsplitB_tree [] = Left ()
+lsplitB_tree [h] = Right ([],[(h,[])])
+lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
+                        where 
+                          (a,b) = (split (uncurry min) (uncurry max) ) (h1,h2)
+                          (tMin,tMax) = (split (filter ((uncurry(&&)). split (>a) (<b))) (filter (>b)) ) t
+                          l = filter (<a) t
 
-qSortB_tree = undefined
+qSortB_tree :: Ord t => [t] -> [t]
+qSortB_tree = inordB_tree . anaB_tree lsplitB_tree
 
-dotB_tree = undefined
+dotB_tree :: Show a => B_tree a -> IO ExitCode
+dotB_tree = dotpict . bmap nothing (Just . show) . cB_tree2Exp
 
-cB_tree2Exp = undefined
+cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
+              where 
+                f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
+              --f (a,(b,c)) = Term b (a:c)
 \end{code}
 
 \subsection*{Problema 4}
