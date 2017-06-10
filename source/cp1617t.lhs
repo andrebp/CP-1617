@@ -999,9 +999,19 @@ showAlgae = cataA (either (const "A") conc) (either (const "B") id)
 \subsection*{Problema 5}
 
 \begin{code}
-permuta = undefined
+permuta [] = return []
+permuta l = do {
+  (h,t) <- getR l;
+  res <- permuta t;
+  return (h:res)
+}
 
-eliminatoria = undefined
+eliminatoria (Leaf a) = return a
+eliminatoria (Fork (e,d)) = do{
+  x <- eliminatoria e;
+  y <- eliminatoria d;
+  (jogo (x,y))
+}
 \end{code}
 
 %----------------- Fim do anexo cpm soluções propostas ------------------------%
