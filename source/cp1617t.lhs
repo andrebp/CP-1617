@@ -712,15 +712,6 @@ outras funções auxiliares que sejam necessárias.
 
 \begin{code}
 inv x = p1 . for (split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))
-{-
-inv x 0 = 1
-
-inv x (n+1) = aux1 x n + inv x n
-
-aux1 x 0 =  (1-x)
-
-aux1 x (n+1) = (1-x) * aux1 x n 
--}
 \end{code}
 
 \subsection*{Problema 2}
@@ -733,7 +724,100 @@ worker = cataList (split (either (const 0) aux ) (either (const True) (sep . p1)
           sep = cond (\c -> c==' ' || c =='\n' || c=='\t' ) true false
           aux = cond ( uncurry (&&) . (split (not . sep . p1) (p2 . p2))) (succ. p1 . p2) (p1 . p2)
 \end{code}
+Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{lookahead\_sep} nas suas versões point free.
+\begin{eqnarray*}
+\start
+  
+  |wc_w [] = 0|
 
+  |wc_w (c:l) = if (not sep c) && lookahead_sep l then wc_w l + 1 else wc_w l|
+  %
+  \just={(74),(76),(79),(81), def succ, def nil, def cons}
+  %
+  |(wc_w . nil) x = (const 0) x|
+  
+  |(wc_w . cons) (c,l) = if (not sep . p1) && (lookahead_sep . p2) (c,l) 
+                         then (succ . wc_w . p2) (c,l) 
+                         else (wc_w . p2) (c,l)|
+  %
+  \just={(76), def uncurry (and), (78), (80)}
+  %
+  |(wc_w . nil) = (const 0)|
+  
+  |(wc_w . cons) (c,l) = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2)) (c,l)|
+
+  %
+  \just={(73)}
+  %
+  |wc_w . nil = (const 0)|
+  
+  |wc_w . cons = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2))|
+  %
+  \just={(1),(12),(7)}
+  %
+  |wc_w . nil = (const 0)|
+  
+  |wc_w . cons = cond (uncurry (&&) . split (not . sep . p1 . (id >< split (wc_w) (lookahead_sep)) ) (p2. split(wc_w)(lookahead_sep) .p2) (succ . p1 . split (wc_w)(lookahead_sep). p2) (p1. split wc_w lookahead_sep . p2))|
+  %
+  \just={(13)}
+  |wc_w . nil = (const 0)|
+  
+  |wc_w . cons = cond (uncurry (&&) . split (not . sep .p1 . (id >< split (wc_w) (lookahead_sep))) (p2. p2 . (id >< split (wc_w) (lookahead_sep))) (succ . p1 . p2 . (id >< split (wc_w)(lookahead_sep))) (p1 . p2 . (id >< split (wc_w)(lookahead_sep))))|
+  %
+  \just={(9)}
+  %
+  |wc_w . nil = (const 0)|
+  
+  |wc_w . cons = cond( uncurry (&&) . (split (not . sep . p1)(p2 . p2) . (id >< split (wc_w)(lookahead_sep))) (succ.p1.p2.(id><split(wc_w)(lookahead_sep))) (p1.p2.(id><split(wc_w)(lookahead_sep))))|
+  %
+  \just={(32)}
+  %
+  |wc_w . nil = (const 0)|
+  
+  |wc_w . cons = cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) . (id >< split (wc_w)(lookahead_sep))))|
+\end{eqnarray*}
+\begin{eqnarray*}
+\start
+
+  |lookahead_sep [] = True|
+
+  |lookahead_sep (c:l) = sep c|
+  %
+  \just={(81), def nil, def cons, (76)}
+  %
+  |lookahead_sep . nil = (const True)|
+
+  |(lookahead_sep . cons) (c,l) = (sep . p1) (c,l)|
+  %
+  \just={(73)}
+  %
+  |lookahead_sep . nil = (const True)|
+
+  |lookahead_sep . cons = sep . p1|
+\end{eqnarray*}
+Graças à definição de in de listas([nil,cons]),da lei 20 (Fusão +) e da lei 27 (Eq +), podemos definir cada uma das funcoes da seguinte forma:
+\begin{eqnarray*}
+\start
+
+  |wc_w . in = either (const 0) (cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) . (id >< split (wc_w)(lookahead_sep)))))|
+
+  |lookahaed_sep . in = either (const True) (sep . p1)|
+\end{eqnarray*}
+Por fim, como o Functor de listas é do tipo 1 + X, aplicamos a lei 50 (Fokkinga):
+\begin{eqnarray*}
+\start
+
+  |wc_w . in = either (const 0) (cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) . (id >< split (wc_w)(lookahead_sep))))) . (id >< split (wc_w)(lookahead_sep))|
+
+  |lookahaed_sep . in = either (const True) (sep . p1) . (id >< split (wc_w)(lookahead_sep))|
+
+  %
+  \just={(50)}
+  %
+  |split (wc_w) (lookahead_sep) = cataList( split ( either (const 0) (cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) ))) ) (either (const True) (sep . p1)) )|
+
+\end{eqnarray*}
+Desta forma chegamos à definição do worker, um catamorfismo de listas. Como apenas nos interessa o primeiro elemento do par, a função wrapper seleciona apenas o primeiro elemento, ficando assim com a definição de wc w final.
 \subsection*{Problema 3}
 
 \begin{code}

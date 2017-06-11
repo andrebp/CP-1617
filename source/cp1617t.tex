@@ -296,13 +296,13 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 33
 \\\hline
-a11111 & Nome1 (preencher)	
+a71841 & André Pinho
 \\
-a22222 & Nome2 (preencher)	
+a70363 & Hugo Gonçalves	
 \\
-a33333 & Nome3 (preencher)	
+a72362 & Miguel Costa
 \end{tabular}
 \end{center}
 
@@ -1139,62 +1139,221 @@ outras funções auxiliares que sejam necessárias.
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{inv}\;\Varid{x}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inv}\;\Varid{x}\mathrel{=}\p1\comp \mathsf{for}\ \conj{\uncurry{(\mathbin{+})}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}\ (\mathrm{1},(\mathrm{1}\mathbin{-}\Varid{x})){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 2}
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{10}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{11}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{wc\char95 w\char95 final}\mathbin{::}[\mskip1.5mu \Conid{Char}\mskip1.5mu]\to \Conid{Int}{}\<[E]%
 \\
 \>[B]{}\Varid{wc\char95 w\char95 final}\mathrel{=}\Varid{wrapper}\comp \Varid{worker}{}\<[E]%
 \\
-\>[B]{}\Varid{wrapper}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{wrapper}\mathrel{=}\p1{}\<[E]%
 \\
-\>[B]{}\Varid{worker}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{worker}\mathrel{=}\Varid{cataList}\;\conj{\alt{\underline{\mathrm{0}}}{\Varid{aux}}}{\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}{}\<[E]%
+\\
+\>[B]{}\hsindent{10}{}\<[10]%
+\>[10]{}\mathbf{where}{}\<[E]%
+\\
+\>[10]{}\hsindent{1}{}\<[11]%
+\>[11]{}\Varid{sep}\mathrel{=}\Varid{cond}\;(\lambda \Varid{c}\to \Varid{c}\equiv \text{\tt '~'}\mathrel{\vee}\Varid{c}\equiv \text{\tt '\char92 n'}\mathrel{\vee}\Varid{c}\equiv \text{\tt '\char92 t'})\;\Varid{true}\;\Varid{false}{}\<[E]%
+\\
+\>[10]{}\hsindent{1}{}\<[11]%
+\>[11]{}\Varid{aux}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2})\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
+Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{lookahead\_sep} nas suas versões point free.
+\begin{eqnarray*}
+\start
+  
+  \ensuremath{\Varid{wc\char95 w}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\mathrm{0}}
 
+  \ensuremath{\Varid{wc\char95 w}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\mathbf{if}\;(\neg \;\Varid{sep}\;\Varid{c})\mathrel{\wedge}\Varid{lookahead\char95 sep}\;\Varid{l}\;\mathbf{then}\;\Varid{wc\char95 w}\;\Varid{l}\mathbin{+}\mathrm{1}\;\mathbf{else}\;\Varid{wc\char95 w}\;\Varid{l}}
+  %
+  \just={(74),(76),(79),(81), def succ, def nil, def cons}
+  %
+  \ensuremath{(\Varid{wc\char95 w}\comp \Varid{nil})\;\Varid{x}\mathrel{=}\underline{\mathrm{0}}\;\Varid{x}}
+  
+  \ensuremath{(\Varid{wc\char95 w}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}\mathbf{if}\;(\neg \;\Varid{sep}\comp \p1)\mathrel{\wedge}(\Varid{lookahead\char95 sep}\comp \p2)\;(\Varid{c},\Varid{l})\;\mathbf{then}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{c},\Varid{l})\;\mathbf{else}\;(\Varid{wc\char95 w}\comp \p2)\;(\Varid{c},\Varid{l})}
+  %
+  \just={(76), def uncurry (and), (78), (80)}
+  %
+  \ensuremath{(\Varid{wc\char95 w}\comp \Varid{nil})\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{(\Varid{wc\char95 w}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\Varid{lookahead\char95 sep}\comp \p2}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{wc\char95 w}\comp \p2))\;(\Varid{c},\Varid{l})}
+
+  %
+  \just={(73)}
+  %
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\Varid{lookahead\char95 sep}\comp \p2}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{wc\char95 w}\comp \p2))}
+  %
+  \just={(1),(12),(7)}
+  %
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}{\p2\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2}\;(\succ \comp \p1\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2)\;(\p1\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2))}
+  %
+  \just={(13)}
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}{\p2\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}\;(\succ \comp \p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
+  %
+  \just={(9)}
+  %
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\succ \comp \p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
+  %
+  \just={(32)}
+  %
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
+  
+  \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2)\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
+\end{eqnarray*}
+\begin{eqnarray*}
+\start
+
+  \ensuremath{\Varid{lookahead\char95 sep}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\Conid{True}}
+
+  \ensuremath{\Varid{lookahead\char95 sep}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\Varid{sep}\;\Varid{c}}
+  %
+  \just={(81), def nil, def cons, (76)}
+  %
+  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}}
+
+  \ensuremath{(\Varid{lookahead\char95 sep}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}(\Varid{sep}\comp \p1)\;(\Varid{c},\Varid{l})}
+  %
+  \just={(73)}
+  %
+  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}}
+
+  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{cons}\mathrel{=}\Varid{sep}\comp \p1}
+\end{eqnarray*}
+Graças à definição de in de listas([nil,cons]),da lei 20 (Fusão +) e da lei 27 (Eq +), podemos definir cada uma das funcoes da seguinte forma:
+\begin{eqnarray*}
+\start
+
+  \ensuremath{\Varid{wc\char95 w}\comp \mathbf{in}\mathrel{=}\alt{\underline{\mathrm{0}}}{\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2)\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}}
+
+  \ensuremath{\Varid{lookahaed\char95 sep}\comp \mathbf{in}\mathrel{=}\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}
+\end{eqnarray*}
+Por fim, como o Functor de listas é do tipo 1 + X, aplicamos a lei 50 (Fokkinga):
+\begin{eqnarray*}
+\start
+
+  \ensuremath{\Varid{wc\char95 w}\comp \mathbf{in}\mathrel{=}\alt{\underline{\mathrm{0}}}{\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2)\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}
+
+  \ensuremath{\Varid{lookahaed\char95 sep}\comp \mathbf{in}\mathrel{=}\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}
+
+  %
+  \just={(50)}
+  %
+  \ensuremath{\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\mathrel{=}\Varid{cataList}\;\conj{\alt{\underline{\mathrm{0}}}{\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2))}}{\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}}
+
+\end{eqnarray*}
+Desta forma chegamos à definição do worker, um catamorfismo de listas. Como apenas nos interessa o primeiro elemento do par, a função wrapper seleciona apenas o primeiro elemento, ficando assim com a definição de wc w final.
 \subsection*{Problema 3}
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{10}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{15}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{16}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{17}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{20}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{25}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{27}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{46}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{inB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inB\char95 tree}\mathbin{::}()+(\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a},[\mskip1.5mu (\Varid{a},\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a})\mskip1.5mu])\to \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}{}\<[E]%
 \\
-\>[B]{}\Varid{outB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inB\char95 tree}\mathrel{=}\alt{\underline{\Conid{Nil}}}{\uncurry{\Conid{Block}}}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{recB\char95 tree}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{outB\char95 tree}\;\Conid{Nil}\mathrel{=}i_1\;(){}\<[E]%
 \\
-\>[B]{}\Varid{baseB\char95 tree}\;\Varid{g}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{cataB\char95 tree}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{anaB\char95 tree}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{hyloB\char95 tree}\;\Varid{f}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{outB\char95 tree}\;(\Conid{Block}\;\{\mskip1.5mu \Varid{leftmost}\mathrel{=}\Varid{l},\Varid{block}\mathrel{=}\Varid{b}\mskip1.5mu\})\mathrel{=}i_2\;(\Varid{l},\Varid{b}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{recB\char95 tree}\;\Varid{f}\mathrel{=}\Varid{baseB\char95 tree}\;\Varid{id}\;\Varid{f}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{baseB\char95 tree}\;\Varid{g}\;\Varid{f}\mathrel{=}\Varid{id}+\Varid{f}\times\map \;(\Varid{g}\times\Varid{f}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{cataB\char95 tree}\;\Varid{g}\mathrel{=}\Varid{g}\comp \Varid{recB\char95 tree}\;(\Varid{cataB\char95 tree}\;\Varid{g})\comp \Varid{outB\char95 tree}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{anaB\char95 tree}\;\Varid{g}\mathrel{=}\Varid{inB\char95 tree}\comp \Varid{recB\char95 tree}\;(\Varid{anaB\char95 tree}\;\Varid{g})\comp \Varid{g}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{hyloB\char95 tree}\;\Varid{f}\;\Varid{g}\mathrel{=}\Varid{cataB\char95 tree}\;\Varid{f}\comp \Varid{anaB\char95 tree}\;\Varid{g}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\mathbf{instance}\;\Conid{Functor}\;\mathsf{B}\mbox{-}\mathsf{tree} {}\<[E]%
 \\
 \>[B]{}\hsindent{10}{}\<[10]%
-\>[10]{}\mathbf{where}\;\mathsf{fmap}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[10]{}\mathbf{where}\;\mathsf{fmap}\;\Varid{f}\mathrel{=}\Varid{cataB\char95 tree}\;(\Varid{inB\char95 tree}\comp \Varid{baseB\char95 tree}\;\Varid{f}\;\Varid{id}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{inordB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inordB\char95 tree}\mathrel{=}\Varid{cataB\char95 tree}\;\alt{\Varid{nil}}{\mathsf{conc}\comp (\Varid{id}\times(\Varid{concat}\comp \map \;\Varid{cons}))}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{largestBlock}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{largestBlock}\mathrel{=}\Varid{cataB\char95 tree}\;(\alt{\underline{\mathrm{0}}}{{}\<[46]%
+\>[46]{}\uncurry{\Varid{max}}}\comp (\Varid{id}+\Varid{id}\times\Varid{f})){}\<[E]%
+\\
+\>[B]{}\hsindent{16}{}\<[16]%
+\>[16]{}\mathbf{where}\;\Varid{f}\mathrel{=}\uncurry{\Varid{max}}\comp \conj{\length }{\Varid{maximum}}\comp (\map \;\p2){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{mirrorB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{mirrorB\char95 tree}\mathrel{=}\Varid{anaB\char95 tree}\;((\Varid{id}+((\Varid{g}\comp \Varid{f})\comp (\Varid{id}\times(\Varid{unzip}\comp \Varid{reverse}))))\comp \Varid{outB\char95 tree}){}\<[E]%
+\\
+\>[B]{}\hsindent{16}{}\<[16]%
+\>[16]{}\mathbf{where}{}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{f}\;(\Varid{a},([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu \mskip1.5mu]))\mathrel{=}(\Varid{a},([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu \mskip1.5mu])){}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{f}\;(\Varid{a},(\Varid{l},(\Varid{h}\mathbin{:}\Varid{t})))\mathrel{=}(\Varid{h},(\Varid{l},\Varid{t}\plus [\mskip1.5mu \Varid{a}\mskip1.5mu])){}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{g}{}\<[20]%
+\>[20]{}\mathrel{=}(\Varid{id}\times\uncurry{\Varid{zip}}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{lsplitB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}i_1\;(){}\<[E]%
+\\
+\>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \Varid{h}\mskip1.5mu]\mathrel{=}i_2\;([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu (\Varid{h},[\mskip1.5mu \mskip1.5mu])\mskip1.5mu]){}\<[E]%
+\\
+\>[B]{}\Varid{lsplitB\char95 tree}\;(\Varid{h1}\mathbin{:}\Varid{h2}\mathbin{:}\Varid{t})\mathrel{=}i_2\;((\Varid{l},[\mskip1.5mu (\Varid{a},\Varid{tMin}),(\Varid{b},\Varid{tMax})\mskip1.5mu])){}\<[E]%
+\\
+\>[B]{}\hsindent{25}{}\<[25]%
+\>[25]{}\mathbf{where}{}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}(\Varid{a},\Varid{b})\mathrel{=}\conj{\uncurry{\Varid{min}}}{\uncurry{\Varid{max}}}\;(\Varid{h1},\Varid{h2}){}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}(\Varid{tMin},\Varid{tMax})\mathrel{=}\conj{\Varid{filter}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\mathbin{>}\Varid{a}}{\mathbin{<}\Varid{b}})}{\Varid{filter}\;(\mathbin{>}\Varid{b})}\;\Varid{t}{}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}\Varid{l}\mathrel{=}\Varid{filter}\;(\mathbin{<}\Varid{a})\;\Varid{t}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{qSortB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{qSortB\char95 tree}\mathbin{::}\Conid{Ord}\;\Varid{t}\Rightarrow [\mskip1.5mu \Varid{t}\mskip1.5mu]\to [\mskip1.5mu \Varid{t}\mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{qSortB\char95 tree}\mathrel{=}\Varid{inordB\char95 tree}\comp \Varid{anaB\char95 tree}\;\Varid{lsplitB\char95 tree}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{dotB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{dotB\char95 tree}\mathbin{::}\Conid{Show}\;\Varid{a}\Rightarrow \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}\to \fun{IO}\;\Conid{ExitCode}{}\<[E]%
+\\
+\>[B]{}\Varid{dotB\char95 tree}\mathrel{=}\Varid{dotpict}\comp \Varid{bmap}\;\Varid{nothing}\;(\Conid{Just}\comp \Varid{show})\comp \Varid{cB\char95 tree2Exp}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{cB\char95 tree2Exp}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{cB\char95 tree2Exp}\mathrel{=}\Varid{cataB\char95 tree}\;\alt{\underline{(\Conid{Var}\;\text{\tt \char34 nil\char34})}}{\Varid{f}\comp (\Varid{id}\times\Varid{unzip})}{}\<[E]%
+\\
+\>[B]{}\hsindent{15}{}\<[15]%
+\>[15]{}\mathbf{where}{}\<[E]%
+\\
+\>[15]{}\hsindent{2}{}\<[17]%
+\>[17]{}\Varid{f}\mathrel{=}\uncurry{\Conid{Term}}\comp (((\Varid{id}\times\Varid{cons})\comp \Varid{assocr}\comp (\Varid{swap}\times\Varid{id})\comp \Varid{assocl})){}\<[E]%
+\\
+\>[B]{}\hsindent{15}{}\<[15]%
+\>[15]{}\mbox{\onelinecomment f (a,(b,c)) = Term b (a:c)}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1202,10 +1361,22 @@ outras funções auxiliares que sejam necessárias.
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{14}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\ana{\cdot ~\cdot }_A\mathrel{=}\bot {}\<[E]%
+\>[B]{}\mbox{\commentbegin Tendo em conta as definições dos catamorfismos dadas, definir os anamorfismos correspondentes é uma tarefa bastante simples:  \commentend}{}\<[E]%
+\\
+\>[B]{}\Varid{recA}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{baseA}\;\Varid{id}\;\Varid{g}\;\Varid{h}{}\<[E]%
+\\
+\>[B]{}\Varid{baseA}\;\Varid{f}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{f}+\Varid{g}\times\Varid{h}{}\<[E]%
+\\
+\>[B]{}\ana{\Varid{ga}~\Varid{gb}}_A\mathrel{=}\Varid{inA}\comp (\Varid{recA}\;\ana{\Varid{ga}~\Varid{gb}}_A\;\ana{\Varid{ga}~\Varid{gb}}_B)\comp \Varid{ga}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\ana{\cdot ~\cdot }_B\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{recB}\;\Varid{f}\mathrel{=}\Varid{baseB}\;\Varid{id}\;\Varid{f}{}\<[E]%
+\\
+\>[B]{}\Varid{baseB}\;\Varid{g}\;\Varid{f}\mathrel{=}{}\<[14]%
+\>[14]{}\Varid{g}+\Varid{f}{}\<[E]%
+\\
+\>[B]{}\ana{\Varid{ga}~\Varid{gb}}_B\mathrel{=}\Varid{inB}\comp (\Varid{recB}\;\ana{\Varid{ga}~\Varid{gb}}_A)\comp \Varid{gb}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1214,7 +1385,7 @@ outras funções auxiliares que sejam necessárias.
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{generateAlgae}\mathrel{=}\bot {}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{showAlgae}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{showAlgae}\mathrel{=}\cata{\Varid{show}~\Varid{show}}_A{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
