@@ -712,6 +712,20 @@ outras funções auxiliares que sejam necessárias.
 
 \begin{code}
 inv x = p1 . for (split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))
+
+genVal :: Gen ( Float, Int )
+genVal = do
+  x <- Test.QuickCheck.choose (1,2)
+  y <- Test.QuickCheck.choose (1000,1000)
+  return (x,y)
+
+prop_inv f =
+  forAll genVal $ \(x,y) ->
+  abs ((1/x)-(inv x y)) < f
+  where types = f :: Float
+
+testInv f = quickCheck (prop_inv f)
+
 \end{code}
 
 \subsection*{Problema 2}
