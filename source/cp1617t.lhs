@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{cp1617t}
 %================= lhs2tex=====================================================%
-%include polycode.fmt 
+%include polycode.fmt
 %format (div (x)(y)) = x "\div " y
 %format succ = "\succ "
 %format map = "\map "
@@ -41,7 +41,7 @@
 %format (anaA (f) (g)) = "\ana{" f "~" g "}_A"
 %format (cataB (f) (g)) = "\cata{" f "~" g "}_B"
 %format (anaB (f) (g)) = "\ana{" f "~" g "}_B"
-%format Either a b = a "+" b 
+%format Either a b = a "+" b
 %format fmap = "\mathsf{fmap}"
 %format NA   = "\textsc{na}"
 %format NB   = "\textsc{nb}"
@@ -89,7 +89,7 @@
 \\\hline
 a71841 & André Pinho
 \\
-a70363 & Hugo Gonçalves	
+a70363 & Hugo Gonçalves
 \\
 a72362 & Miguel Costa
 \end{tabular}
@@ -107,7 +107,7 @@ parte-se de um repertório de \emph{combinadores} que formam uma álgebra da
 programação (conjunto de leis universais e seus corolários) e usam-se esses
 combinadores para construir programas \emph{composicionalmente}, isto é,
 agregando programas já existentes.
-  
+
 Na sequência pedagógica dos planos de estudo dos dois cursos que têm esta
 disciplina, restringe-se a aplicação deste método ao desenvolvimento de programas
 funcionais na linguagem \Haskell.
@@ -147,7 +147,7 @@ o ``kit'' básico, escrito em \Haskell, para realizar o trabalho. Basta executar
 \begin{Verbatim}[fontsize=\small]
     ghci cp1617t.lhs
 \end{Verbatim}
-para ver que assim é: 
+para ver que assim é:
 \begin{quote}
 \begin{Verbatim}[fontsize=\small]
 GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
@@ -172,12 +172,12 @@ fonte, se ter inserido o seguinte código \Haskell:
 
 \begin{code}
 import Cp
-import List 
-import Nat  
+import List
+import Nat
 import Exp
 import BTree
 import LTree
-import St 
+import St
 import Probability hiding (cond)
 import Data.List
 import Test.QuickCheck hiding ((><))
@@ -228,7 +228,7 @@ as suas leituras para um sistema central, onde é feito o respectivo processamen
 Verificando-se que o sistema central está muito sobrecarregado, surgiu a
 ideia de equipar cada sensor com um microcontrolador que faça algum pré-processamento
 das leituras antes de as enviar ao sistema central. Esse tratamento envolve
-as operações (em vírgula flutuante) de soma, subtracção, multiplicação e divisão. 
+as operações (em vírgula flutuante) de soma, subtracção, multiplicação e divisão.
 
 Há, contudo, uma dificuldade: o código da divisão não cabe na memória do
 microcontrolador, e não se pretende investir em novos microcontroladores
@@ -271,7 +271,7 @@ DESCRIPTION
     (...)
     The following options are available:
     (...)
-        -w   The number of words in each input file is written to the standard 
+        -w   The number of words in each input file is written to the standard
              output.
     (...)
 \end{verbatim}
@@ -566,7 +566,7 @@ que, assumindo já disponível a função |jogo| acima referida, dá como result
 a distribuição de equipas vencedoras do campeonato.
 \end{enumerate}
 \textbf{Sugestão:} inspire-se na secção \monadification\ (\emph{`Monadification'
-of Haskell code made easy}) dos apontamentos \cite{Ol05}. 
+of Haskell code made easy}) dos apontamentos \cite{Ol05}.
 
 %----------------- Bibliografia (exige bibtex) --------------------------------%
 
@@ -656,7 +656,7 @@ particular de programação monádica.
 São dadas: a função que simula jogos entre equipas,
 \begin{code}
 type Equipa = String
- 
+
 jogo :: (Equipa, Equipa) -> Dist Equipa
 jogo(e1,e2) = D [ (e1,1-r1/(r1+r2)),(e2,1-r2/(r1+r2)) ] where
               r1 = rank e1
@@ -692,7 +692,7 @@ e algumas funções auxiliares de menor importância: uma que ordena
 listas com base num atributo (função que induz uma pré-ordem),
 \begin{code}
 presort :: (Ord a, Ord b) => (b -> a) -> [b] -> [b]
-presort f = map snd . sort . (map (fork f id)) 
+presort f = map snd . sort . (map (fork f id))
 \end{code}
 e outra que converte ``look-up  tables" em funções (parciais):
 \begin{code}
@@ -705,7 +705,7 @@ pap m k = unJust (lookup k m) where unJust (Just a) = a
 \section{Soluções propostas}\label{sec:resolucao}
 Os alunos devem colocar neste anexo as suas soluções aos exercícios
 propostos, de acordo com o ``layout'' que se fornece. Não podem ser
-alterados os nomes das funções dadas, mas pode ser adicionado texto e / ou 
+alterados os nomes das funções dadas, mas pode ser adicionado texto e / ou
 outras funções auxiliares que sejam necessárias.
 
 \subsection*{Problema 1}
@@ -720,14 +720,22 @@ wc_w_final :: [Char] -> Int
 wc_w_final = wrapper . worker
 wrapper = p1
 worker = cataList (split (either (const 0) aux ) (either (const True) (sep . p1)))
-         where 
+         where
           sep = cond (\c -> c==' ' || c =='\n' || c=='\t' ) true false
           aux = cond ( uncurry (&&) . (split (not . sep . p1) (p2 . p2))) (succ. p1 . p2) (p1 . p2)
+
+
+prop_wc :: [Char] -> Bool
+prop_wc x =
+  wc_w_final x == wc_w x
+
+testWc = quickCheck prop_wc
+
 \end{code}
 Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{lookahead\_sep} nas suas versões point free.
 \begin{eqnarray*}
 \start
-  
+
   |wc_w [] = 0|
 
   |wc_w (c:l) = if (not sep c) && lookahead_sep l then wc_w l + 1 else wc_w l|
@@ -735,45 +743,45 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
   \just={(74),(76),(79),(81), def succ, def nil, def cons}
   %
   |(wc_w . nil) x = (const 0) x|
-  
-  |(wc_w . cons) (c,l) = if (not sep . p1) && (lookahead_sep . p2) (c,l) 
-                         then (succ . wc_w . p2) (c,l) 
+
+  |(wc_w . cons) (c,l) = if (not sep . p1) && (lookahead_sep . p2) (c,l)
+                         then (succ . wc_w . p2) (c,l)
                          else (wc_w . p2) (c,l)|
   %
   \just={(76), def uncurry (and), (78), (80)}
   %
   |(wc_w . nil) = (const 0)|
-  
+
   |(wc_w . cons) (c,l) = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2)) (c,l)|
 
   %
   \just={(73)}
   %
   |wc_w . nil = (const 0)|
-  
+
   |wc_w . cons = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2))|
   %
   \just={(1),(12),(7)}
   %
   |wc_w . nil = (const 0)|
-  
+
   |wc_w . cons = cond (uncurry (&&) . split (not . sep . p1 . (id >< split (wc_w) (lookahead_sep)) ) (p2. split(wc_w)(lookahead_sep) .p2) (succ . p1 . split (wc_w)(lookahead_sep). p2) (p1. split wc_w lookahead_sep . p2))|
   %
   \just={(13)}
   |wc_w . nil = (const 0)|
-  
+
   |wc_w . cons = cond (uncurry (&&) . split (not . sep .p1 . (id >< split (wc_w) (lookahead_sep))) (p2. p2 . (id >< split (wc_w) (lookahead_sep))) (succ . p1 . p2 . (id >< split (wc_w)(lookahead_sep))) (p1 . p2 . (id >< split (wc_w)(lookahead_sep))))|
   %
   \just={(9)}
   %
   |wc_w . nil = (const 0)|
-  
+
   |wc_w . cons = cond( uncurry (&&) . (split (not . sep . p1)(p2 . p2) . (id >< split (wc_w)(lookahead_sep))) (succ.p1.p2.(id><split(wc_w)(lookahead_sep))) (p1.p2.(id><split(wc_w)(lookahead_sep))))|
   %
   \just={(32)}
   %
   |wc_w . nil = (const 0)|
-  
+
   |wc_w . cons = cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) . (id >< split (wc_w)(lookahead_sep))))|
 \end{eqnarray*}
 \begin{eqnarray*}
@@ -824,7 +832,7 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 inB_tree :: Either () (B_tree a, [(a, B_tree a)]) -> B_tree a
 inB_tree = either (const Nil) (uncurry Block)
 
-outB_tree Nil = Left () 
+outB_tree Nil = Left ()
 outB_tree (Block {leftmost=l, block=b}) = Right (l,b)
 
 recB_tree f = baseB_tree id f
@@ -833,7 +841,7 @@ baseB_tree g f = id -|- f >< map (g >< f)
 
 cataB_tree g = g . recB_tree(cataB_tree g) . outB_tree
 
-anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g 
+anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g
 
 hyloB_tree f g = cataB_tree f . anaB_tree g
 
@@ -845,16 +853,16 @@ inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
 largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
                where f = (uncurry max) . (split length maximum) . (map p2)
 
-mirrorB_tree = anaB_tree ((id -|- ( (g . f) . (id >< (unzip . reverse)) ) ). outB_tree) 
-               where 
+mirrorB_tree = anaB_tree ((id -|- ( (g . f) . (id >< (unzip . reverse)) ) ). outB_tree)
+               where
                 f (a , ([],[])) = (a,([],[]))
                 f (a , (l, (h:t))) = (h,(l, t++[a]))
-                g  = (id >< ( uncurry zip))  
+                g  = (id >< ( uncurry zip))
 
 lsplitB_tree [] = Left ()
 lsplitB_tree [h] = Right ([],[(h,[])])
 lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
-                        where 
+                        where
                           (a,b) = (split (uncurry min) (uncurry max) ) (h1,h2)
                           (tMin,tMax) = (split (filter ((uncurry(&&)). split (>a) (<b))) (filter (>b)) ) t
                           l = filter (<a) t
@@ -866,7 +874,7 @@ dotB_tree :: Show a => B_tree a -> IO ExitCode
 dotB_tree = dotpict . bmap nothing (Just . show) . cB_tree2Exp
 
 cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
-              where 
+              where
                 f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
               --f (a,(b,c)) = Term b (a:c)
 \end{code}
@@ -874,11 +882,11 @@ cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
 \subsection*{Problema 4}
 
 \begin{code}
- 
+
 {-Tendo em conta as definições dos catamorfismos dadas, definir os anamorfismos correspondentes é uma tarefa bastante simples: -}
 recA g h = baseA id g h
 baseA f g h = f -|- g >< h
-anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga 
+anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga
 
 recB f = baseB id f
 baseB g f =  g -|- f
@@ -920,4 +928,3 @@ envia = unsafePerformIO
 }
 
 \end{document}
-
