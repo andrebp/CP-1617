@@ -184,6 +184,7 @@ import Test.QuickCheck hiding ((><))
 import System.Random  hiding (split)
 import GHC.IO.Exception
 import System.IO.Unsafe
+import Control.Monad
 \end{code}
 
 \noindent Abra o ficheiro \texttt{cp1617t.lhs} no seu editor de texto preferido
@@ -739,7 +740,6 @@ worker = cataList (split (either (const 0) aux ) (either (const True) (sep . p1)
           aux = cond ( uncurry (&&) . (split (not . sep . p1) (p2 . p2))) (succ. p1 . p2) (p1 . p2)
 
 
-prop_wc :: [Char] -> Bool
 prop_wc x =
   wc_w_final x == wc_w x
 
@@ -891,6 +891,16 @@ cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
               where
                 f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
               --f (a,(b,c)) = Term b (a:c)
+
+checkList xs = and $ zipWith (<=) xs $ tail xs
+
+prop_ord l =
+  checkList x == True
+  where x = qSortB_tree l
+
+prop_mirror l =
+  checkList ( invl ((inordB_tree . mirrorB_tree . (anaB_tree lsplitB_tree)) l) ) == True
+
 \end{code}
 
 \subsection*{Problema 4}
