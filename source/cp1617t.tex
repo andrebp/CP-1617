@@ -296,13 +296,13 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 33
 \\\hline
-a11111 & Nome1 (preencher)	
+a71841 & André Pinho
 \\
-a22222 & Nome2 (preencher)	
+a70363 & Hugo Gonçalves	
 \\
-a33333 & Nome3 (preencher)	
+a72362 & Miguel Costa
 \end{tabular}
 \end{center}
 
@@ -1139,21 +1139,41 @@ outras funções auxiliares que sejam necessárias.
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{inv}\;\Varid{x}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inv}\;\Varid{x}\mathrel{=}\p1\comp \mathsf{for}\ \conj{\uncurry{(\mathbin{+})}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}\ (\mathrm{1},(\mathrm{1}\mathbin{-}\Varid{x})){}\<[E]%
+\\
+\>[B]{}\mbox{\commentbegin 
+inv x 0 = 1
+
+inv x (n+1) = aux1 x n + inv x n
+
+aux1 x 0 =  (1-x)
+
+aux1 x (n+1) = (1-x) * aux1 x n  \commentend}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 2}
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{10}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{11}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{wc\char95 w\char95 final}\mathbin{::}[\mskip1.5mu \Conid{Char}\mskip1.5mu]\to \Conid{Int}{}\<[E]%
 \\
 \>[B]{}\Varid{wc\char95 w\char95 final}\mathrel{=}\Varid{wrapper}\comp \Varid{worker}{}\<[E]%
 \\
-\>[B]{}\Varid{wrapper}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{wrapper}\mathrel{=}\p1{}\<[E]%
 \\
-\>[B]{}\Varid{worker}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{worker}\mathrel{=}\Varid{cataList}\;\conj{\alt{\underline{\mathrm{0}}}{\Varid{aux}}}{\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}{}\<[E]%
+\\
+\>[B]{}\hsindent{10}{}\<[10]%
+\>[10]{}\mathbf{where}{}\<[E]%
+\\
+\>[10]{}\hsindent{1}{}\<[11]%
+\>[11]{}\Varid{sep}\mathrel{=}\Varid{cond}\;(\lambda \Varid{c}\to \Varid{c}\equiv \text{\tt '~'}\mathrel{\vee}\Varid{c}\equiv \text{\tt '\char92 n'}\mathrel{\vee}\Varid{c}\equiv \text{\tt '\char92 t'})\;\Varid{true}\;\Varid{false}{}\<[E]%
+\\
+\>[10]{}\hsindent{1}{}\<[11]%
+\>[11]{}\Varid{aux}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2})\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1162,59 +1182,205 @@ outras funções auxiliares que sejam necessárias.
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{10}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{15}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{16}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{17}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{20}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{25}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{27}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{46}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{inB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inB\char95 tree}\mathbin{::}()+(\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a},[\mskip1.5mu (\Varid{a},\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a})\mskip1.5mu])\to \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}{}\<[E]%
 \\
-\>[B]{}\Varid{outB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inB\char95 tree}\mathrel{=}\alt{\underline{\Conid{Nil}}}{\uncurry{\Conid{Block}}}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{recB\char95 tree}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{outB\char95 tree}\;\Conid{Nil}\mathrel{=}i_1\;(){}\<[E]%
 \\
-\>[B]{}\Varid{baseB\char95 tree}\;\Varid{g}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{cataB\char95 tree}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{anaB\char95 tree}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
-\\
-\>[B]{}\Varid{hyloB\char95 tree}\;\Varid{f}\;\Varid{g}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{outB\char95 tree}\;(\Conid{Block}\;\{\mskip1.5mu \Varid{leftmost}\mathrel{=}\Varid{l},\Varid{block}\mathrel{=}\Varid{b}\mskip1.5mu\})\mathrel{=}i_2\;(\Varid{l},\Varid{b}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{recB\char95 tree}\;\Varid{f}\mathrel{=}\Varid{baseB\char95 tree}\;\Varid{id}\;\Varid{f}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{baseB\char95 tree}\;\Varid{g}\;\Varid{f}\mathrel{=}\Varid{id}+\Varid{f}\times\map \;(\Varid{g}\times\Varid{f}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{cataB\char95 tree}\;\Varid{g}\mathrel{=}\Varid{g}\comp \Varid{recB\char95 tree}\;(\Varid{cataB\char95 tree}\;\Varid{g})\comp \Varid{outB\char95 tree}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{anaB\char95 tree}\;\Varid{g}\mathrel{=}\Varid{inB\char95 tree}\comp \Varid{recB\char95 tree}\;(\Varid{anaB\char95 tree}\;\Varid{g})\comp \Varid{g}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{hyloB\char95 tree}\;\Varid{f}\;\Varid{g}\mathrel{=}\Varid{cataB\char95 tree}\;\Varid{f}\comp \Varid{anaB\char95 tree}\;\Varid{g}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\mathbf{instance}\;\Conid{Functor}\;\mathsf{B}\mbox{-}\mathsf{tree} {}\<[E]%
 \\
 \>[B]{}\hsindent{10}{}\<[10]%
-\>[10]{}\mathbf{where}\;\mathsf{fmap}\;\Varid{f}\mathrel{=}\bot {}\<[E]%
+\>[10]{}\mathbf{where}\;\mathsf{fmap}\;\Varid{f}\mathrel{=}\Varid{cataB\char95 tree}\;(\Varid{inB\char95 tree}\comp \Varid{baseB\char95 tree}\;\Varid{f}\;\Varid{id}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{inordB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{inordB\char95 tree}\mathrel{=}\Varid{cataB\char95 tree}\;\alt{\Varid{nil}}{\mathsf{conc}\comp (\Varid{id}\times(\Varid{concat}\comp \map \;\Varid{cons}))}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{largestBlock}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{largestBlock}\mathrel{=}\Varid{cataB\char95 tree}\;(\alt{\underline{\mathrm{0}}}{{}\<[46]%
+\>[46]{}\uncurry{\Varid{max}}}\comp (\Varid{id}+\Varid{id}\times\Varid{f})){}\<[E]%
+\\
+\>[B]{}\hsindent{16}{}\<[16]%
+\>[16]{}\mathbf{where}\;\Varid{f}\mathrel{=}\uncurry{\Varid{max}}\comp \conj{\length }{\Varid{maximum}}\comp (\map \;\p2){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{mirrorB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\mbox{\onelinecomment mirrorB_tree = cataB_tree ( inB_tree . (id -\ensuremath{\mathbin{-}(\Varid{g}\comp \Varid{f}))\comp (\Varid{id}\mathbin{-}}- id >< (unzip . reverse))) }{}\<[E]%
+\\
+\>[B]{}\Varid{mirrorB\char95 tree}\mathrel{=}\Varid{cataB\char95 tree}\;(\Varid{inB\char95 tree}\comp (\Varid{id}+((\Varid{g}\comp \Varid{f})\comp (\Varid{id}\times(\Varid{unzip}\comp \Varid{reverse}))))){}\<[E]%
+\\
+\>[B]{}\hsindent{16}{}\<[16]%
+\>[16]{}\mathbf{where}{}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{f}\;(\Varid{a},([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu \mskip1.5mu]))\mathrel{=}(\Varid{a},([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu \mskip1.5mu])){}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{f}\;(\Varid{a},(\Varid{l},(\Varid{h}\mathbin{:}\Varid{t})))\mathrel{=}(\Varid{h},(\Varid{l},\Varid{t}\plus [\mskip1.5mu \Varid{a}\mskip1.5mu])){}\<[E]%
+\\
+\>[16]{}\hsindent{1}{}\<[17]%
+\>[17]{}\Varid{g}{}\<[20]%
+\>[20]{}\mathrel{=}(\Varid{id}\times\uncurry{\Varid{zip}}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{lsplitB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}i_1\;(){}\<[E]%
+\\
+\>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \Varid{h}\mskip1.5mu]\mathrel{=}i_2\;([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu (\Varid{h},[\mskip1.5mu \mskip1.5mu])\mskip1.5mu]){}\<[E]%
+\\
+\>[B]{}\Varid{lsplitB\char95 tree}\;(\Varid{h1}\mathbin{:}\Varid{h2}\mathbin{:}\Varid{t})\mathrel{=}i_2\;((\Varid{l},[\mskip1.5mu (\Varid{a},\Varid{tMin}),(\Varid{b},\Varid{tMax})\mskip1.5mu])){}\<[E]%
+\\
+\>[B]{}\hsindent{25}{}\<[25]%
+\>[25]{}\mathbf{where}{}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}(\Varid{a},\Varid{b})\mathrel{=}\conj{\uncurry{\Varid{min}}}{\uncurry{\Varid{max}}}\;(\Varid{h1},\Varid{h2}){}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}(\Varid{tMin},\Varid{tMax})\mathrel{=}\conj{\Varid{filter}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\mathbin{>}\Varid{a}}{\mathbin{<}\Varid{b}})}{\Varid{filter}\;(\mathbin{>}\Varid{b})}\;\Varid{t}{}\<[E]%
+\\
+\>[25]{}\hsindent{2}{}\<[27]%
+\>[27]{}\Varid{l}\mathrel{=}\Varid{filter}\;(\mathbin{<}\Varid{a})\;\Varid{t}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{qSortB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{qSortB\char95 tree}\mathbin{::}\Conid{Ord}\;\Varid{t}\Rightarrow [\mskip1.5mu \Varid{t}\mskip1.5mu]\to [\mskip1.5mu \Varid{t}\mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{qSortB\char95 tree}\mathrel{=}\Varid{inordB\char95 tree}\comp \Varid{anaB\char95 tree}\;\Varid{lsplitB\char95 tree}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{dotB\char95 tree}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{dotB\char95 tree}\mathbin{::}\Conid{Show}\;\Varid{a}\Rightarrow \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}\to \fun{IO}\;\Conid{ExitCode}{}\<[E]%
+\\
+\>[B]{}\Varid{dotB\char95 tree}\mathrel{=}\Varid{dotpict}\comp \Varid{bmap}\;\Varid{nothing}\;(\Conid{Just}\comp \Varid{show})\comp \Varid{cB\char95 tree2Exp}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{cB\char95 tree2Exp}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{cB\char95 tree2Exp}\mathrel{=}\Varid{cataB\char95 tree}\;\alt{\underline{(\Conid{Var}\;\text{\tt \char34 nil\char34})}}{\Varid{f}\comp (\Varid{id}\times\Varid{unzip})}{}\<[E]%
+\\
+\>[B]{}\hsindent{15}{}\<[15]%
+\>[15]{}\mathbf{where}{}\<[E]%
+\\
+\>[15]{}\hsindent{2}{}\<[17]%
+\>[17]{}\Varid{f}\mathrel{=}\uncurry{\Conid{Term}}\comp (((\Varid{id}\times\Varid{cons})\comp \Varid{assocr}\comp (\Varid{swap}\times\Varid{id})\comp \Varid{assocl})){}\<[E]%
+\\
+\>[B]{}\hsindent{15}{}\<[15]%
+\>[15]{}\mbox{\onelinecomment f (a,(b,c)) = Term b (a:c)}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 4}
 
+Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples: 
+
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{14}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\ana{\cdot ~\cdot }_A\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{recA}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{baseA}\;\Varid{id}\;\Varid{g}\;\Varid{h}{}\<[E]%
+\\
+\>[B]{}\Varid{baseA}\;\Varid{f}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{f}+\Varid{g}\times\Varid{h}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\ana{\cdot ~\cdot }_B\mathrel{=}\bot {}\<[E]%
+\>[B]{}\ana{\cdot ~\cdot }_A\mathbin{::}(\Varid{a}\to 1+\Varid{a}\times\Varid{d})\to (\Varid{d}\to 1+\Varid{a})\to \Varid{a}\to \Conid{A}{}\<[E]%
+\\
+\>[B]{}\ana{\Varid{ga}~\Varid{gb}}_A\mathrel{=}\Varid{inA}\comp (\Varid{recA}\;\ana{\Varid{ga}~\Varid{gb}}_A\;\ana{\Varid{ga}~\Varid{gb}}_B)\comp \Varid{ga}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{recB}\;\Varid{f}\mathrel{=}\Varid{baseB}\;\Varid{id}\;\Varid{f}{}\<[E]%
+\\
+\>[B]{}\Varid{baseB}\;\Varid{g}\;\Varid{f}\mathrel{=}{}\<[14]%
+\>[14]{}\Varid{g}+\Varid{f}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\ana{\cdot ~\cdot }_B\mathbin{::}(\Varid{c}\to 1+\Varid{c}\times\Varid{d})\to (\Varid{d}\to 1+\Varid{c})\to \Varid{d}\to \mathit B{}\<[E]%
+\\
+\>[B]{}\ana{\Varid{ga}~\Varid{gb}}_B\mathrel{=}\Varid{inB}\comp (\Varid{recB}\;\ana{\Varid{ga}~\Varid{gb}}_A)\comp \Varid{gb}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
+Para resolvermos a generateAlgae construimos os dois diagramas:
+
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{Int}}
+      \ar[d]_-{\ensuremath{\ana{\Varid{ga}~\Varid{gb}}_A}}
+      \ar[r]^-{\ensuremath{(\Varid{id}\mathbin{+}\mathbin{<}\Varid{id},\Varid{id}\mathbin{>})\comp \Varid{outNat}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}\times\Conid{Int}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\ana{\Varid{ga}~\Varid{gb}}_A\times\ana{\Varid{ga}~\Varid{gb}}_B}}
+\\
+     \ensuremath{\Conid{A}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}\times\mathit B}
+           \ar[l]^-{\ensuremath{\Varid{inA}}}
+}
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{Int}}
+      \ar[d]_-{\ensuremath{\ana{\Varid{ga}~\Varid{gb}}_B}}
+      \ar[r]^-{\ensuremath{\Varid{outNat}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\ana{\Varid{ga}~\Varid{gb}}_A}}
+\\
+     \ensuremath{\mathit B}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}}
+           \ar[l]^-{\ensuremath{\Varid{inB}}}
+}
+
+Daqui inferimos que para o geneB seria apenas necessário fazer o out dos naturais, e chegariamos ao tipo esperado. Para o geneA, tinhamos de criar um par de inteiros no lado direito da alternativa, portanto após o out, é feito um split de identidades chegando ao tipo desejado.
+
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{generateAlgae}\mathrel{=}\bot {}\<[E]%
-\\[\blanklineskip]%
-\>[B]{}\Varid{showAlgae}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{generateAlgae}\mathrel{=}\ana{(\Varid{id}+\conj{\Varid{id}}{\Varid{id}})\comp \Varid{outNat}~\Varid{outNat}}_A{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
+
+
+Para resolvermos a showAlgae construimos os dois diagramas:
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{A}}
+      \ar[d]_-{\ensuremath{\cata{\Varid{ga}~\Varid{gb}}_A}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}\times\mathit B}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\cata{\Varid{ga}~\Varid{gb}}_A\;\Conid{X}\;\cata{\Varid{ga}~\Varid{gb}}_B}}
+           \ar[l]_-{\ensuremath{\Varid{inA}}}
+\\
+     \ensuremath{\Conid{S}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{S}\times\Conid{S}}
+           \ar[l]^-{\ensuremath{[\mskip1.5mu \underline{\text{\tt \char34 A\char34}},\mathsf{conc}\mskip1.5mu]}}
+}
+
+\xymatrix@C=2cm{
+  \ensuremath{\mathit B}
+      \ar[d]_-{\ensuremath{\cata{\Varid{ga}~\Varid{gb}}_A}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathit B}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\cata{\Varid{ga}~\Varid{gb}}_A}}
+           \ar[l]_-{\ensuremath{\Varid{inB}}}
+\\
+     \ensuremath{\Conid{S}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{S}}
+           \ar[l]^-{\ensuremath{[\mskip1.5mu \underline{\text{\tt \char34 B\char34}},\Varid{id}\mskip1.5mu]}}
+}
+
+Com base nos diagramas, verificamos que ambos os genes seriam alternativas. No lado esquerdo da alternativa, o geneA aplica a função constante à string "A" e o geneB aplica a mesma função à string "B". No lado direito da alternativa, o geneA faz (++) uncurried, o geneB apenas aplica a identidade.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{showAlgae}\mathrel{=}\cata{\alt{\underline{\text{\tt \char34 A\char34}}}{\mathsf{conc}}~\alt{\underline{\text{\tt \char34 B\char34}}}{\Varid{id}}}_A{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 

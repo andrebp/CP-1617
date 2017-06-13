@@ -790,28 +790,96 @@ cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
 
 \subsection*{Problema 4}
 
+Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples: 
+
 \begin{code}
  
-{-Tendo em conta as definições dos catamorfismos dadas, definir os anamorfismos correspondentes é uma tarefa bastante simples: -}
 recA g h = baseA id g h
 baseA f g h = f -|- g >< h
+
+anaA:: (a -> Either Null (Prod a d)) -> (d -> Either Null a) -> a -> A
 anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga 
 
 recB f = baseB id f
 baseB g f =  g -|- f
+
+anaB :: (c -> Either Null (Prod c d)) -> (d -> Either Null c) -> d -> B
 anaB ga gb = inB . (recB (anaA ga gb)) . gb
 
 \end{code}
+Para resolvermos a generateAlgae construimos os dois diagramas:
+
+
+\xymatrix@@C=2cm{
+  |Int|
+      \ar[d]_-{|anaA ga gb|}
+      \ar[r]^-{|(id + <id,id>)  . outNat|}
+&
+    |1 + Int >< Int|
+           \ar[d]^{|id + (anaA ga gb) >< (anaB ga gb)|}
+\\
+     |A|
+&
+     |1 + A >< B|
+           \ar[l]^-{|inA|}
+}
+
+\xymatrix@@C=2cm{
+  |Int|
+      \ar[d]_-{|anaB ga gb|}
+      \ar[r]^-{|outNat|}
+&
+    |1 + Int|
+           \ar[d]^{|id + (anaA ga gb)|}
+\\
+     |B|
+&
+     |1 + A|
+           \ar[l]^-{|inB|}
+}
+
+Daqui inferimos que para o geneB seria apenas necessário fazer o out dos naturais, e chegariamos ao tipo esperado. Para o geneA, tinhamos de criar um par de inteiros no lado direito da alternativa, portanto após o out, é feito um split de identidades chegando ao tipo desejado.
+
 
 \begin{code}
+generateAlgae = anaA ((id -|- split id id) . outNat) (outNat) 
+\end{code}
 
-generateAlgae = undefined
 
-showAlgae = cataA (either (const "") f) (either (const "") g)
-            where
-              f (a,b) = "A " ++ a ++ b
-              g a = "B " ++ a   
+Para resolvermos a showAlgae construimos os dois diagramas:
 
+\xymatrix@@C=2cm{
+  |A|
+      \ar[d]_-{|cataA ga gb|}
+&
+    |1 + A >< B|
+           \ar[d]^{|id + (cataA ga gb) X (cataB ga gb)|}
+           \ar[l]_-{|inA|}
+\\
+     |S|
+&
+     |1 + S >< S|
+           \ar[l]^-{|[(const "A"),conc]|}
+}
+
+\xymatrix@@C=2cm{
+  |B|
+      \ar[d]_-{|cataA ga gb|}
+&
+    |1 + B|
+           \ar[d]^{|id + (cataA ga gb)|}
+           \ar[l]_-{|inB|}
+\\
+     |S|
+&
+     |1 + S|
+           \ar[l]^-{|[(const "B"),id]|}
+}
+
+Com base nos diagramas, verificamos que ambos os genes seriam alternativas. No lado esquerdo da alternativa, o geneA aplica a função constante à string "A" e o geneB aplica a mesma função à string "B". No lado direito da alternativa, o geneA faz (++) uncurried, o geneB apenas aplica a identidade.
+
+\begin{code}
+showAlgae = cataA (either (const "A") conc) (either (const "B") id)
 \end{code}
 
 \subsection*{Problema 5}
