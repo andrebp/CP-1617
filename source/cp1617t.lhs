@@ -1150,7 +1150,7 @@ Para resolvermos a showAlgae construimos os dois diagramas:
       \ar[d]_-{|cataA ga gb|}
 &
     |1 + A >< B|
-           \ar[d]^{|id + (cataA ga gb) X (cataB ga gb)|}
+           \ar[d]^{|id + (cataA ga gb) >< (cataB ga gb)|}
            \ar[l]_-{|inA|}
 \\
      |S|
