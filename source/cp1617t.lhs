@@ -56,6 +56,7 @@
 %format IO = "\fun{IO}"
 %format BTree = "\fun{BTree} "
 %format LTree = "\mathsf{LTree}"
+%format (lcbr (x)(y)) = "\begin{lcbr}" x "\\" y "\end{lcbr}"
 %-------------- interface with pdbc.lhs ------------------------------------
 \def\monadification{4.10}
 %---------------------------------------------------------------------------
@@ -710,7 +711,35 @@ alterados os nomes das funções dadas, mas pode ser adicionado texto e / ou
 outras funções auxiliares que sejam necessárias.
 
 \subsection*{Problema 1}
+Em primeiro lugar escrevemos a função inv em pointwise, e seguimos a sugestão da secção 3.16 dos apontamentos para chegar à definição de inv x como um ciclo for.
 
+\begin{eqnarray*}
+\start
+
+|lcbr (inv x 0 = 1)(inv x (n+1) = inv x n + aux x n)|
+
+|lcbr (aux x 0 = (1-x))(aux x (n+1) = (1-x)* aux x n)|
+%
+\just={(27), (73),(74),(76)}
+%
+|lcbr ( (inv . either (const 0)(succ)) x = either (const 1) (uncurry (+) . split (inv)(aux))) ( (aux . either (const 0) (succ)) x = either (1-x) (*(1-x)))|
+%
+\just={def-inNat, (22)}
+%
+|lcbr ((inv . inNat) x = either (const 1) (add ) . F(split (inv)(aux)))((aux . inNat) x = either (1-x) (*(1-x) . p2 ) . F(split inv aux))|
+%
+\just={(50)}
+|(split (inv) (aux)) x = cataNat (split (either (const 1) (uncurry (+))) (either (1-x) ( (*(1-x)).p2 )) ) |
+%
+\just={(28)}
+%
+|(split inv aux) x = cataNat (either (split (const 1) (1-x) ) (split (uncurry (+)) ((*(1-x)) . p2) ) )|
+%
+\just={def for}
+%
+|(split inv aux) x = for(split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))|
+\end{eqnarray*}
+Como apenas interessa o primeiro elemento do par, aplicamos p1 ao resultado do ciclo for, chegando assim à definição final.
 \begin{code}
 inv x = p1 . for (split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))
 
