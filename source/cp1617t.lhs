@@ -934,14 +934,14 @@ prop_mirror l =
 
 \subsection*{Problema 4}
 
-Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples: 
+Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples:
 
 \begin{code}
 recA g h = baseA id g h
 baseA f g h = f -|- g >< h
 
 anaA:: (a -> Either Null (Prod a d)) -> (d -> Either Null a) -> a -> A
-anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga 
+anaA ga gb = inA . (recA (anaA ga gb) (anaB ga gb)) . ga
 
 recB f = baseB id f
 baseB g f =  g -|- f
@@ -985,7 +985,7 @@ Daqui inferimos que para o geneB seria apenas necessário fazer o out dos natura
 
 
 \begin{code}
-generateAlgae = anaA ((id -|- split id id) . outNat) (outNat) 
+generateAlgae = anaA ((id -|- split id id) . outNat) (outNat)
 \end{code}
 
 
@@ -1023,6 +1023,23 @@ Com base nos diagramas, verificamos que ambos os genes seriam alternativas. No l
 
 \begin{code}
 showAlgae = cataA (either (const "A") conc) (either (const "B") id)
+\end{code}
+
+\begin{code}
+
+genPos :: Gen Int
+genPos = do
+  n <- Test.QuickCheck.choose(0,20)
+  return (n)
+
+myfib :: Int -> Int
+myfib = hyloLTree (either (const 1) (uncurry (+))) fibd
+
+prop_LSystems n =
+  (length . showAlgae . generateAlgae) n == (myfib . succ) n
+
+testLSystems = quickCheck $ forAll genPos $ \n -> prop_LSystems n
+
 \end{code}
 
 \subsection*{Problema 5}
