@@ -267,6 +267,7 @@
 % -- desactivados:
 %%format cond p f g = "\mcond{" p "}{" f "}{" g "}"
 \def\ana#1{\mathopen{[\!(}#1\mathclose{)\!]}}
+
 %-------------- interface with pdbc.lhs ------------------------------------
 \def\monadification{4.10}
 %---------------------------------------------------------------------------
@@ -300,7 +301,7 @@
 \\\hline
 a71841 & André Pinho
 \\
-a70363 & Hugo Gonçalves	
+a70363 & Hugo Gonçalves
 \\
 a72362 & Miguel Costa
 \end{tabular}
@@ -318,7 +319,7 @@ parte-se de um repertório de \emph{combinadores} que formam uma álgebra da
 programação (conjunto de leis universais e seus corolários) e usam-se esses
 combinadores para construir programas \emph{composicionalmente}, isto é,
 agregando programas já existentes.
-  
+
 Na sequência pedagógica dos planos de estudo dos dois cursos que têm esta
 disciplina, restringe-se a aplicação deste método ao desenvolvimento de programas
 funcionais na linguagem \Haskell.
@@ -358,7 +359,7 @@ o ``kit'' básico, escrito em \Haskell, para realizar o trabalho. Basta executar
 \begin{Verbatim}[fontsize=\small]
     ghci cp1617t.lhs
 \end{Verbatim}
-para ver que assim é: 
+para ver que assim é:
 \begin{quote}
 \begin{Verbatim}[fontsize=\small]
 GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
@@ -411,6 +412,8 @@ fonte, se ter inserido o seguinte código \Haskell:
 \>[B]{}\mathbf{import}\;\Conid{\Conid{GHC}.\fun{IO}.Exception}{}\<[E]%
 \\
 \>[B]{}\mathbf{import}\;\Conid{\Conid{System}.\fun{IO}.Unsafe}{}\<[E]%
+\\
+\>[B]{}\mathbf{import}\;\Conid{\Conid{Control}.Monad}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -456,7 +459,7 @@ as suas leituras para um sistema central, onde é feito o respectivo processamen
 Verificando-se que o sistema central está muito sobrecarregado, surgiu a
 ideia de equipar cada sensor com um microcontrolador que faça algum pré-processamento
 das leituras antes de as enviar ao sistema central. Esse tratamento envolve
-as operações (em vírgula flutuante) de soma, subtracção, multiplicação e divisão. 
+as operações (em vírgula flutuante) de soma, subtracção, multiplicação e divisão.
 
 Há, contudo, uma dificuldade: o código da divisão não cabe na memória do
 microcontrolador, e não se pretende investir em novos microcontroladores
@@ -499,7 +502,7 @@ Se digitar \wc{\ensuremath{\Varid{man}\;\Varid{wc}}} na shell do Unix (Linux) ob
 \tt ~~~~~\char40{}\char46{}\char46{}\char46{}\char41{}\\
 \tt ~~~~~The~following~options~are~available\char58{}\\
 \tt ~~~~~\char40{}\char46{}\char46{}\char46{}\char41{}\\
-\tt ~~~~~~~~~\char45{}w~~~The~number~of~words~in~each~input~file~is~written~to~the~standard~\\
+\tt ~~~~~~~~~\char45{}w~~~The~number~of~words~in~each~input~file~is~written~to~the~standard\\
 \tt ~~~~~~~~~~~~~~output\char46{}\\
 \tt ~~~~~\char40{}\char46{}\char46{}\char46{}\char41{}
 \end{tabbing}
@@ -914,7 +917,7 @@ que, assumindo já disponível a função \ensuremath{\Varid{jogo}} acima referi
 a distribuição de equipas vencedoras do campeonato.
 \end{enumerate}
 \textbf{Sugestão:} inspire-se na secção \monadification\ (\emph{`Monadification'
-of Haskell code made easy}) dos apontamentos \cite{Ol05}. 
+of Haskell code made easy}) dos apontamentos \cite{Ol05}.
 
 %----------------- Bibliografia (exige bibtex) --------------------------------%
 
@@ -1131,21 +1134,77 @@ e outra que converte ``look-up  tables" em funções (parciais):
 \section{Soluções propostas}\label{sec:resolucao}
 Os alunos devem colocar neste anexo as suas soluções aos exercícios
 propostos, de acordo com o ``layout'' que se fornece. Não podem ser
-alterados os nomes das funções dadas, mas pode ser adicionado texto e / ou 
+alterados os nomes das funções dadas, mas pode ser adicionado texto e / ou
 outras funções auxiliares que sejam necessárias.
 
 \subsection*{Problema 1}
+Em primeiro lugar escrevemos a função inv em pointwise, e seguimos a sugestão da secção 3.16 dos apontamentos para chegar à definição de inv x como um ciclo for.
 
+\begin{eqnarray*}
+\start
+
+\ensuremath{\begin{lcbr}\Varid{inv}\;\Varid{x}\;\mathrm{0}\mathrel{=}\mathrm{1}\\\Varid{inv}\;\Varid{x}\;(\Varid{n}\mathbin{+}\mathrm{1})\mathrel{=}\Varid{inv}\;\Varid{x}\;\Varid{n}\mathbin{+}\Varid{aux}\;\Varid{x}\;\Varid{n}\end{lcbr}}
+
+\ensuremath{\begin{lcbr}\Varid{aux}\;\Varid{x}\;\mathrm{0}\mathrel{=}(\mathrm{1}\mathbin{-}\Varid{x})\\\Varid{aux}\;\Varid{x}\;(\Varid{n}\mathbin{+}\mathrm{1})\mathrel{=}(\mathrm{1}\mathbin{-}\Varid{x})\mathbin{*}\Varid{aux}\;\Varid{x}\;\Varid{n}\end{lcbr}}
+%
+\just{\ensuremath{\mathbin{<=>}}}{(27), (73),(74),(76)}
+%
+\ensuremath{\begin{lcbr}(\Varid{inv}\comp \alt{\underline{\mathrm{0}}}{\succ })\;\Varid{x}\mathrel{=}\alt{\underline{\mathrm{1}}}{\uncurry{(\mathbin{+})}\comp \conj{\Varid{inv}}{\Varid{aux}}}\\(\Varid{aux}\comp \alt{\underline{\mathrm{0}}}{\succ })\;\Varid{x}\mathrel{=}\alt{\mathrm{1}\mathbin{-}\Varid{x}}{\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x})}\end{lcbr}}
+%
+\just{\ensuremath{\mathbin{<=>}}}{def-inNat, (22)}
+%
+\ensuremath{\begin{lcbr}(\Varid{inv}\comp \Varid{inNat})\;\Varid{x}\mathrel{=}\alt{\underline{\mathrm{1}}}{\Varid{add}}\comp \Conid{F}\;\conj{\Varid{inv}}{\Varid{aux}}\\(\Varid{aux}\comp \Varid{inNat})\;\Varid{x}\mathrel{=}\alt{\mathrm{1}\mathbin{-}\Varid{x}}{\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x})\comp \p2}\comp \Conid{F}\;\conj{\Varid{inv}}{\Varid{aux}}\end{lcbr}}
+%
+\just{\ensuremath{\mathbin{<=>}}}{(50)}
+\ensuremath{\conj{\Varid{inv}}{\Varid{aux}}\;\Varid{x}\mathrel{=}\Varid{cataNat}\;\conj{\alt{\underline{\mathrm{1}}}{\uncurry{(\mathbin{+})}}}{\alt{\mathrm{1}\mathbin{-}\Varid{x}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}}}
+%
+\just{\ensuremath{\mathbin{<=>}}}{(28)}
+%
+\ensuremath{\conj{\Varid{inv}}{\Varid{aux}}\;\Varid{x}\mathrel{=}\Varid{cataNat}\;\alt{\conj{\underline{\mathrm{1}}}{\mathrm{1}\mathbin{-}\Varid{x}}}{\conj{\uncurry{(\mathbin{+})}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}}}
+%
+\just{\ensuremath{\mathbin{<=>}}}{def for}
+%
+\ensuremath{\conj{\Varid{inv}}{\Varid{aux}}\;\Varid{x}\mathrel{=}\mathsf{for}\ \conj{\uncurry{(\mathbin{+})}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}\ (\mathrm{1},(\mathrm{1}\mathbin{-}\Varid{x}))}
+\end{eqnarray*}
+Como apenas interessa o primeiro elemento do par, aplicamos p1 ao resultado do ciclo for, chegando assim à definição final.
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{inv}\;\Varid{x}\mathrel{=}\p1\comp \mathsf{for}\ \conj{\uncurry{(\mathbin{+})}}{(\mathbin{*}(\mathrm{1}\mathbin{-}\Varid{x}))\comp \p2}\ (\mathrm{1},(\mathrm{1}\mathbin{-}\Varid{x})){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{genVal}\mathbin{::}\Conid{Gen}\;(\Conid{Float},\Conid{Int}){}\<[E]%
+\\
+\>[B]{}\Varid{genVal}\mathrel{=}\mathbf{do}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{x}\leftarrow \Varid{\Conid{Test}.\Conid{QuickCheck}.choose}\;(\mathrm{1},\mathrm{2}){}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{y}\leftarrow \Varid{\Conid{Test}.\Conid{QuickCheck}.choose}\;(\mathrm{1000},\mathrm{1000}){}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{return}\;(\Varid{x},\Varid{y}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{prop\char95 inv}\;\Varid{f}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{forAll}\;\Varid{genVal}\mathbin{\$}\lambda (\Varid{x},\Varid{y})\to {}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{abs}\;((\mathrm{1}\mathbin{/}\Varid{x})\mathbin{-}(\Varid{inv}\;\Varid{x}\;\Varid{y}))\mathbin{<}\Varid{f}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\mathbf{where}\;\Varid{types}\mathrel{=}\Varid{f}\mathbin{::}\Conid{Float}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{testInv}\;\Varid{f}\mathrel{=}\Varid{quickCheck}\;(\Varid{prop\char95 inv}\;\Varid{f}){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 2}
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{10}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{11}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
@@ -1165,82 +1224,82 @@ outras funções auxiliares que sejam necessárias.
 \\
 \>[10]{}\hsindent{1}{}\<[11]%
 \>[11]{}\Varid{aux}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2})\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{prop\char95 wc}\;\Varid{x}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{wc\char95 w\char95 final}\;\Varid{x}\equiv \Varid{wc\char95 w}\;\Varid{x}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{testWc}\mathrel{=}\Varid{quickCheck}\;\Varid{prop\char95 wc}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{lookahead\_sep} nas suas versões point free.
 \begin{eqnarray*}
 \start
-  
-  \ensuremath{\Varid{wc\char95 w}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\mathrm{0}}
 
-  \ensuremath{\Varid{wc\char95 w}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\mathbf{if}\;(\neg \;\Varid{sep}\;\Varid{c})\mathrel{\wedge}\Varid{lookahead\char95 sep}\;\Varid{l}\;\mathbf{then}\;\Varid{wc\char95 w}\;\Varid{l}\mathbin{+}\mathrm{1}\;\mathbf{else}\;\Varid{wc\char95 w}\;\Varid{l}}
+  \ensuremath{\begin{lcbr}\Varid{wc\char95 w}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\mathrm{0}\\\Varid{wc\char95 w}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\mathbf{if}\;(\neg \;\Varid{sep}\;\Varid{c})\mathrel{\wedge}\Varid{lookahead\char95 sep}\;\Varid{l}\;\mathbf{then}\;\Varid{wc\char95 w}\;\Varid{l}\mathbin{+}\mathrm{1}\;\mathbf{else}\;\Varid{wc\char95 w}\;\Varid{l}\end{lcbr}}
   %
-  \just={(74),(76),(79),(81), def succ, def nil, def cons}
+  \just{\ensuremath{\mathbin{<=>}}}{(74),(76),(79),(81), def succ, def nil, def cons}
   %
   \ensuremath{(\Varid{wc\char95 w}\comp \Varid{nil})\;\Varid{x}\mathrel{=}\underline{\mathrm{0}}\;\Varid{x}}
-  
+
   \ensuremath{(\Varid{wc\char95 w}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}\mathbf{if}\;(\neg \;\Varid{sep}\comp \p1)\mathrel{\wedge}(\Varid{lookahead\char95 sep}\comp \p2)\;(\Varid{c},\Varid{l})\;\mathbf{then}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{c},\Varid{l})\;\mathbf{else}\;(\Varid{wc\char95 w}\comp \p2)\;(\Varid{c},\Varid{l})}
   %
-  \just={(76), def uncurry (and), (78), (80)}
+  \just{\ensuremath{\mathbin{<=>}}}{(76), def uncurry (and), (78), (80)}
   %
   \ensuremath{(\Varid{wc\char95 w}\comp \Varid{nil})\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{(\Varid{wc\char95 w}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\Varid{lookahead\char95 sep}\comp \p2}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{wc\char95 w}\comp \p2))\;(\Varid{c},\Varid{l})}
 
   %
-  \just={(73)}
+  \just{\ensuremath{\mathbin{<=>}}}{(73)}
   %
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\Varid{lookahead\char95 sep}\comp \p2}\;(\succ \comp \Varid{wc\char95 w}\comp \p2)\;(\Varid{wc\char95 w}\comp \p2))}
   %
-  \just={(1),(12),(7)}
+  \just{\ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
   %
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}{\p2\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2}\;(\succ \comp \p1\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2)\;(\p1\comp \conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\comp \p2))}
   %
-  \just={(13)}
+  \just{\ensuremath{\mathbin{<=>}}}{(13)}
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}{\p2\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}\;(\succ \comp \p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
   %
-  \just={(9)}
+  \just{\ensuremath{\mathbin{<=>}}}{(9)}
   %
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\succ \comp \p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}))\;(\p1\comp \p2\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
   %
-  \just={(32)}
+  \just{\ensuremath{\mathbin{<=>}}}{(32)}
   %
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{nil}\mathrel{=}\underline{\mathrm{0}}}
-  
+
   \ensuremath{\Varid{wc\char95 w}\comp \Varid{cons}\mathrel{=}\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2)\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}
 \end{eqnarray*}
 \begin{eqnarray*}
 \start
 
-  \ensuremath{\Varid{lookahead\char95 sep}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\Conid{True}}
-
-  \ensuremath{\Varid{lookahead\char95 sep}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\Varid{sep}\;\Varid{c}}
+  \ensuremath{\begin{lcbr}\Varid{lookahead\char95 sep}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\Conid{True}\\\Varid{lookahead\char95 sep}\;(\Varid{c}\mathbin{:}\Varid{l})\mathrel{=}\Varid{sep}\;\Varid{c}\end{lcbr}}
   %
-  \just={(81), def nil, def cons, (76)}
+  \just{\ensuremath{\mathbin{<=>}}}{(81), def nil, def cons, (76)}
   %
-  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}}
-
-  \ensuremath{(\Varid{lookahead\char95 sep}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}(\Varid{sep}\comp \p1)\;(\Varid{c},\Varid{l})}
+  \ensuremath{\begin{lcbr}\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}\\(\Varid{lookahead\char95 sep}\comp \Varid{cons})\;(\Varid{c},\Varid{l})\mathrel{=}(\Varid{sep}\comp \p1)\;(\Varid{c},\Varid{l})\end{lcbr}}
   %
-  \just={(73)}
+  \just{\ensuremath{\mathbin{<=>}}}{(73)}
   %
-  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}}
-
-  \ensuremath{\Varid{lookahead\char95 sep}\comp \Varid{cons}\mathrel{=}\Varid{sep}\comp \p1}
+  \ensuremath{\begin{lcbr}\Varid{lookahead\char95 sep}\comp \Varid{nil}\mathrel{=}\underline{\Conid{True}}\\\Varid{lookahead\char95 sep}\comp \Varid{cons}\mathrel{=}\Varid{sep}\comp \p1\end{lcbr}}
 \end{eqnarray*}
 Graças à definição de in de listas([nil,cons]),da lei 20 (Fusão +) e da lei 27 (Eq +), podemos definir cada uma das funcoes da seguinte forma:
 \begin{eqnarray*}
 \start
 
   \ensuremath{\Varid{wc\char95 w}\comp \mathbf{in}\mathrel{=}\alt{\underline{\mathrm{0}}}{\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp (\conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2)\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})))}}
+
 
   \ensuremath{\Varid{lookahaed\char95 sep}\comp \mathbf{in}\mathrel{=}\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}
 \end{eqnarray*}
@@ -1253,24 +1312,31 @@ Por fim, como o Functor de listas é do tipo 1 + X, aplicamos a lei 50 (Fokkinga
   \ensuremath{\Varid{lookahaed\char95 sep}\comp \mathbf{in}\mathrel{=}\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}\comp (\Varid{id}\times\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}})}
 
   %
-  \just={(50)}
+  \just{\ensuremath{\mathbin{<=>}}}{(50)}
   %
   \ensuremath{\conj{\Varid{wc\char95 w}}{\Varid{lookahead\char95 sep}}\mathrel{=}\Varid{cataList}\;\conj{\alt{\underline{\mathrm{0}}}{\Varid{cond}\;(\uncurry{(\mathrel{\wedge})}\comp \conj{\neg \comp \Varid{sep}\comp \p1}{\p2\comp \p2}\;(\succ \comp \p1\comp \p2)\;(\p1\comp \p2))}}{\alt{\underline{\Conid{True}}}{\Varid{sep}\comp \p1}}}
 
 \end{eqnarray*}
 Desta forma chegamos à definição do worker, um catamorfismo de listas. Como apenas nos interessa o primeiro elemento do par, a função wrapper seleciona apenas o primeiro elemento, ficando assim com a definição de wc w final.
 \subsection*{Problema 3}
+Em primeiro lugar, começamos por construir o diagrama de um cataB\_tree para construir a biblioteca do tipo.
 
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+           \ar[d]_-{\ensuremath{\Varid{cataB\char95 tree}\;\Varid{g}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\Varid{cataB\char95 tree}\;\Varid{g}\times(\map \;(\Varid{id}\times\Varid{cataB\char95 tree}\;\Varid{g}))}}
+           \ar[l]_-{\ensuremath{\Varid{inB\char95 tree}}}
+\\
+     \ensuremath{\mathit B}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\mathit B\times(\Conid{A}\times\mathit B)}^*
+           \ar[l]^-{\ensuremath{\Varid{g}}}
+}
+\subsubsection*{Alinea 1}
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{10}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{15}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{16}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{17}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{20}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{25}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{27}{@{}>{\hspre}l<{\hspost}@{}}%
-\column{46}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{inB\char95 tree}\mathbin{::}()+(\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a},[\mskip1.5mu (\Varid{a},\mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a})\mskip1.5mu])\to \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}{}\<[E]%
 \\
@@ -1289,20 +1355,167 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 \>[B]{}\Varid{anaB\char95 tree}\;\Varid{g}\mathrel{=}\Varid{inB\char95 tree}\comp \Varid{recB\char95 tree}\;(\Varid{anaB\char95 tree}\;\Varid{g})\comp \Varid{g}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\Varid{hyloB\char95 tree}\;\Varid{f}\;\Varid{g}\mathrel{=}\Varid{cataB\char95 tree}\;\Varid{f}\comp \Varid{anaB\char95 tree}\;\Varid{g}{}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+
+Para definir o fmap para B\_tree, usamos a lei 47, Def-map-cata.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{10}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\mathbf{instance}\;\Conid{Functor}\;\mathsf{B}\mbox{-}\mathsf{tree} {}\<[E]%
 \\
 \>[B]{}\hsindent{10}{}\<[10]%
 \>[10]{}\mathbf{where}\;\mathsf{fmap}\;\Varid{f}\mathrel{=}\Varid{cataB\char95 tree}\;(\Varid{inB\char95 tree}\comp \Varid{baseB\char95 tree}\;\Varid{f}\;\Varid{id}){}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+
+\subsubsection*{Alinea 2}
+Para chegarmos à definição de inordB\_tree, construimos o diagrama de catamorfismos:
+
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+           \ar[d]_-{\ensuremath{\Varid{cataB\char95 tree}\;\Varid{g}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\Varid{cataB\char95 tree}\;\Varid{g}\times(\map \;(\Varid{id}\times\Varid{cataB\char95 tree}\;\Varid{g}))}}
+           \ar[l]_-{\ensuremath{\Varid{inB\char95 tree}}}
+\\
+     \ensuremath{\Conid{A}}^*
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}}^*\ensuremath{\times(\Conid{A}\times\Conid{A}}^*\ensuremath{)}^*
+           \ar[l]^-{\ensuremath{\Varid{g}}}
+}
+
+
+No caso da árvore vazia, geramos a lista vazia. No outro caso:
+\\
+
+\xymatrix@C=2cm{
+  \ensuremath{(\Conid{A}\times\Conid{A}}^*\ensuremath{)}^*
+            \ar[r]_-{\ensuremath{\Varid{concat}\comp \map \;\Varid{cons}}}
+&
+  \ensuremath{\Conid{A}}^*            
+}
+\\
+Para chegarmos à lista final, basta aplicar a função conc, versão uncurried da função (++).
+\\
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{A}}^*\ensuremath{\times\Conid{A}}^*
+            \ar[r]_-{\ensuremath{\uncurry{(\plus )}}}
+&
+  \ensuremath{\Conid{A}}^*            
+}
+\\
+Por fim chegamos à definição de inordB\_tree.
+\\
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{inordB\char95 tree}\mathrel{=}\Varid{cataB\char95 tree}\;\alt{\Varid{nil}}{\mathsf{conc}\comp (\Varid{id}\times(\Varid{concat}\comp \map \;\Varid{cons}))}{}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{Alinea 3}
+Para fazermos a função largestBlock, fizemos um diagrama de catamorfismos.
+
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+           \ar[d]_-{\ensuremath{\Varid{cataB\char95 tree}\;\Varid{g}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\Varid{cataB\char95 tree}\;\Varid{g}\times(\map \;(\Varid{id}\times\Varid{cataB\char95 tree}\;\Varid{g}))}}
+           \ar[l]_-{\ensuremath{\Varid{inB\char95 tree}}}
+\\
+     \ensuremath{\Conid{Int}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}\times(\Conid{A}\times\Conid{Int})}^*
+           \ar[l]^-{\ensuremath{\Varid{g}}}
+}
+
+Para chegarmos à definição do gene, fomos por partes. A primeira foi obter apenas uma lista com apenas o segundo elemento do par. Depois, criar um par com o tamanho dessa lista e o valor do maior elemento da lista. Por fim, guardar o maior dos dois.
+
+\[\xymatrixcolsep{10pc}\xymatrix{
+  \ensuremath{\Conid{A}\times\Conid{Int}}^*
+            \ar[r]^-{\ensuremath{\map \;\p2}}
+&
+  \ensuremath{\Conid{Int}}^*
+    \ar[r]^-{\ensuremath{\uncurry{\Varid{max}}\comp \mathbin{<}\length ,\Varid{maximum}\mathbin{>}}}            
+&
+  \ensuremath{\Conid{Int}}
+}
+
+
+Definindo a função anterior como f:
+\\
+\xymatrix@C=2cm{
+  \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}\times(\Conid{A}\times\Conid{Int})}^*
+            \ar[r]^-{\ensuremath{\Varid{id}\mathbin{+}\Varid{id}\times\Varid{f}}}
+&
+  \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}\times\Conid{Int}}
+            \ar[r]^-{\ensuremath{[\mskip1.5mu \underline{\mathrm{0}},\uncurry{\Varid{max}}\mskip1.5mu]}}            
+&
+  \ensuremath{\Conid{Int}}
+}
+
+Chegando assim à definição do gene do catamorfismo.
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{16}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{46}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{largestBlock}\mathrel{=}\Varid{cataB\char95 tree}\;(\alt{\underline{\mathrm{0}}}{{}\<[46]%
 \>[46]{}\uncurry{\Varid{max}}}\comp (\Varid{id}+\Varid{id}\times\Varid{f})){}\<[E]%
 \\
 \>[B]{}\hsindent{16}{}\<[16]%
 \>[16]{}\mathbf{where}\;\Varid{f}\mathrel{=}\uncurry{\Varid{max}}\comp \conj{\length }{\Varid{maximum}}\comp (\map \;\p2){}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{Alinea 4}
+Para chegar à definição de mirrorB\_tree, construimos um diagrama de anamorfismos.
+\\
+\xymatrix@C=2cm{
+    \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+           \ar[d]_-{\ensuremath{\Varid{anaB\char95 tree}\;\Varid{g}}}
+           \ar[r]_-{\ensuremath{\Varid{g}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\Varid{anaB\char95 tree}\;\Varid{g}\times(\map \;(\Varid{id}\times\Varid{anaB\char95 tree}\;\Varid{g}))}}
+\\
+     \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+           \ar[l]^-{\ensuremath{\Varid{inB\char95 tree}}}
+}
+\\
+O gene do anamorfismo é representado nos seguintes diagramas:
+
+\[\xymatrixcolsep{6pc}\xymatrix{
+  \ensuremath{\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}}
+    \ar[r]^-{\ensuremath{\Varid{outB\char95 tree}}}
+&
+  \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*
+    \ar[r]^-{\ensuremath{\Varid{id}\mathbin{+}\Varid{id}\times(\Varid{unzip}\comp \Varid{reverse})}}
+&
+  \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times((\Conid{A})}^*\ensuremath{\times(\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*\ensuremath{)}   
+}
+\\
+\[\xymatrixcolsep{6pc}\xymatrix{
+  \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times((\Conid{A})}^*\ensuremath{\times(\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*\ensuremath{)}   
+    \ar[r]^-{id + (g .f)}
+&
+  \ensuremath{\mathrm{1}\mathbin{+}\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A}\times(\Conid{A}\times\mathsf{B}\mbox{-}\mathsf{tree} \;\Conid{A})}^*    
+}
+
+
+Chegando à definição final de mirrorB\_tree.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{16}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{17}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{20}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{mirrorB\char95 tree}\mathrel{=}\Varid{anaB\char95 tree}\;((\Varid{id}+((\Varid{g}\comp \Varid{f})\comp (\Varid{id}\times(\Varid{unzip}\comp \Varid{reverse}))))\comp \Varid{outB\char95 tree}){}\<[E]%
 \\
 \>[B]{}\hsindent{16}{}\<[16]%
@@ -1317,7 +1530,16 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 \>[16]{}\hsindent{1}{}\<[17]%
 \>[17]{}\Varid{g}{}\<[20]%
 \>[20]{}\mathrel{=}(\Varid{id}\times\uncurry{\Varid{zip}}){}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{Alinea 5}
+Para a definir o quick sort de B\_tree, faltava definir o gene do anamorfismo. Com base nas dicas dadas pelo professor, chegamos à conclusão que a função tem 3 casos, o de lista vazia, o de lista singular ou lista com mais de 1 elemento. Com o uso da função filter, conseguimos a definição de lsplitB\_tree, que analisa os dois elementos à cabeça da lista, e filtra os restantes elementos da lista para as respetivas posições.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{25}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{27}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}i_1\;(){}\<[E]%
 \\
 \>[B]{}\Varid{lsplitB\char95 tree}\;[\mskip1.5mu \Varid{h}\mskip1.5mu]\mathrel{=}i_2\;([\mskip1.5mu \mskip1.5mu],[\mskip1.5mu (\Varid{h},[\mskip1.5mu \mskip1.5mu])\mskip1.5mu]){}\<[E]%
@@ -1339,7 +1561,16 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 \>[B]{}\Varid{qSortB\char95 tree}\mathbin{::}\Conid{Ord}\;\Varid{t}\Rightarrow [\mskip1.5mu \Varid{t}\mskip1.5mu]\to [\mskip1.5mu \Varid{t}\mskip1.5mu]{}\<[E]%
 \\
 \>[B]{}\Varid{qSortB\char95 tree}\mathrel{=}\Varid{inordB\char95 tree}\comp \Varid{anaB\char95 tree}\;\Varid{lsplitB\char95 tree}{}\<[E]%
-\\[\blanklineskip]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{Alinea 6}
+Para a definição de dotB\_tree, verificamos como era feito para as BTrees, sendo o funcionamento semelhante.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{15}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{17}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{dotB\char95 tree}\mathbin{::}\Conid{Show}\;\Varid{a}\Rightarrow \mathsf{B}\mbox{-}\mathsf{tree} \;\Varid{a}\to \fun{IO}\;\Conid{ExitCode}{}\<[E]%
 \\
 \>[B]{}\Varid{dotB\char95 tree}\mathrel{=}\Varid{dotpict}\comp \Varid{bmap}\;\Varid{nothing}\;(\Conid{Just}\comp \Varid{show})\comp \Varid{cB\char95 tree2Exp}{}\<[E]%
@@ -1356,18 +1587,43 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 \>[15]{}\mbox{\onelinecomment f (a,(b,c)) = Term b (a:c)}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
+\subsubsection*{Quickcheck}
+Fizemos ainda alguns testes para verificar se as funções que definimos estavam correctas.
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{checkList}\;\Varid{xs}\mathrel{=}\Varid{and}\mathbin{\$}\Varid{zipWith}\;(\leq )\;\Varid{xs}\mathbin{\$}\Varid{tail}\;\Varid{xs}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{prop\char95 ord}\;\Varid{l}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{checkList}\;\Varid{x}\equiv \Conid{True}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\mathbf{where}\;\Varid{x}\mathrel{=}\Varid{qSortB\char95 tree}\;\Varid{l}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{prop\char95 mirror}\;\Varid{l}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{checkList}\;(\Varid{invl}\;((\Varid{inordB\char95 tree}\comp \Varid{mirrorB\char95 tree}\comp (\Varid{anaB\char95 tree}\;\Varid{lsplitB\char95 tree}))\;\Varid{l}))\equiv \Conid{True}{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
 
 \subsection*{Problema 4}
+\subsubsection*{Alinea 1}
+Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples: 
+
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{14}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\mbox{\commentbegin Tendo em conta as definições dos catamorfismos dadas, definir os anamorfismos correspondentes é uma tarefa bastante simples:  \commentend}{}\<[E]%
-\\
 \>[B]{}\Varid{recA}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{baseA}\;\Varid{id}\;\Varid{g}\;\Varid{h}{}\<[E]%
 \\
 \>[B]{}\Varid{baseA}\;\Varid{f}\;\Varid{g}\;\Varid{h}\mathrel{=}\Varid{f}+\Varid{g}\times\Varid{h}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\ana{\cdot ~\cdot }_A\mathbin{::}(\Varid{a}\to 1+\Varid{a}\times\Varid{d})\to (\Varid{d}\to 1+\Varid{a})\to \Varid{a}\to \Conid{A}{}\<[E]%
 \\
 \>[B]{}\ana{\Varid{ga}~\Varid{gb}}_A\mathrel{=}\Varid{inA}\comp (\Varid{recA}\;\ana{\Varid{ga}~\Varid{gb}}_A\;\ana{\Varid{ga}~\Varid{gb}}_B)\comp \Varid{ga}{}\<[E]%
 \\[\blanklineskip]%
@@ -1375,28 +1631,218 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 \\
 \>[B]{}\Varid{baseB}\;\Varid{g}\;\Varid{f}\mathrel{=}{}\<[14]%
 \>[14]{}\Varid{g}+\Varid{f}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\ana{\cdot ~\cdot }_B\mathbin{::}(\Varid{c}\to 1+\Varid{c}\times\Varid{d})\to (\Varid{d}\to 1+\Varid{c})\to \Varid{d}\to \mathit B{}\<[E]%
 \\
 \>[B]{}\ana{\Varid{ga}~\Varid{gb}}_B\mathrel{=}\Varid{inB}\comp (\Varid{recB}\;\ana{\Varid{ga}~\Varid{gb}}_A)\comp \Varid{gb}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
+\subsubsection*{Alinea 2}
+Para resolvermos a generateAlgae construimos os dois diagramas:
+
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{Int}}
+      \ar[d]_-{\ensuremath{\ana{\Varid{ga}~\Varid{gb}}_A}}
+      \ar[r]^-{\ensuremath{(\Varid{id}\mathbin{+}\mathbin{<}\Varid{id},\Varid{id}\mathbin{>})\comp \Varid{outNat}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}\times\Conid{Int}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\ana{\Varid{ga}~\Varid{gb}}_A\times\ana{\Varid{ga}~\Varid{gb}}_B}}
+\\
+     \ensuremath{\Conid{A}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}\times\mathit B}
+           \ar[l]^-{\ensuremath{\Varid{inA}}}
+}
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{Int}}
+      \ar[d]_-{\ensuremath{\ana{\Varid{ga}~\Varid{gb}}_B}}
+      \ar[r]^-{\ensuremath{\Varid{outNat}}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{Int}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\ana{\Varid{ga}~\Varid{gb}}_A}}
+\\
+     \ensuremath{\mathit B}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}}
+           \ar[l]^-{\ensuremath{\Varid{inB}}}
+}
+
+Daqui inferimos que para o geneB seria apenas necessário fazer o out dos naturais, e chegariamos ao tipo esperado. Para o geneA, tinhamos de criar um par de inteiros no lado direito da alternativa, portanto após o out, é feito um split de identidades chegando ao tipo desejado.
+
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{generateAlgae}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{generateAlgae}\mathrel{=}\ana{(\Varid{id}+\conj{\Varid{id}}{\Varid{id}})\comp \Varid{outNat}~\Varid{outNat}}_A{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
+
+
+Para resolvermos a showAlgae construimos os dois diagramas:
+
+\xymatrix@C=2cm{
+  \ensuremath{\Conid{A}}
+      \ar[d]_-{\ensuremath{\cata{\Varid{ga}~\Varid{gb}}_A}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\Conid{A}\times\mathit B}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\cata{\Varid{ga}~\Varid{gb}}_A\;\Conid{X}\;\cata{\Varid{ga}~\Varid{gb}}_B}}
+           \ar[l]_-{\ensuremath{\Varid{inA}}}
+\\
+     \ensuremath{\Conid{S}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{S}\times\Conid{S}}
+           \ar[l]^-{\ensuremath{[\mskip1.5mu \underline{\text{\tt \char34 A\char34}},\mathsf{conc}\mskip1.5mu]}}
+}
+
+\xymatrix@C=2cm{
+  \ensuremath{\mathit B}
+      \ar[d]_-{\ensuremath{\cata{\Varid{ga}~\Varid{gb}}_A}}
+&
+    \ensuremath{\mathrm{1}\mathbin{+}\mathit B}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}\cata{\Varid{ga}~\Varid{gb}}_A}}
+           \ar[l]_-{\ensuremath{\Varid{inB}}}
+\\
+     \ensuremath{\Conid{S}}
+&
+     \ensuremath{\mathrm{1}\mathbin{+}\Conid{S}}
+           \ar[l]^-{\ensuremath{[\mskip1.5mu \underline{\text{\tt \char34 B\char34}},\Varid{id}\mskip1.5mu]}}
+}
+
+Com base nos diagramas, verificamos que ambos os genes seriam alternativas. No lado esquerdo da alternativa, o geneA aplica a função constante à string "A" e o geneB aplica a mesma função à string "B". No lado direito da alternativa, o geneA faz (++) uncurried, o geneB apenas aplica a identidade.
+
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{showAlgae}\mathrel{=}\cata{\alt{\underline{\text{\tt \char34 A\char34}}}{\mathsf{conc}}~\alt{\underline{\text{\tt \char34 B\char34}}}{\Varid{id}}}_A{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
+
+\subsubsection*{Alinea 3}
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{genPos}\mathbin{::}\Conid{Gen}\;\Conid{Int}{}\<[E]%
+\\
+\>[B]{}\Varid{genPos}\mathrel{=}\mathbf{do}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{n}\leftarrow \Varid{\Conid{Test}.\Conid{QuickCheck}.choose}\;(\mathrm{0},\mathrm{20}){}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{return}\;(\Varid{n}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{showAlgae}\mathrel{=}\cata{\Varid{show}~\Varid{show}}_A{}\<[E]%
+\>[B]{}\Varid{myfib}\mathbin{::}\Conid{Int}\to \Conid{Int}{}\<[E]%
+\\
+\>[B]{}\Varid{myfib}\mathrel{=}\Varid{hyloLTree}\;\alt{\underline{\mathrm{1}}}{\uncurry{(\mathbin{+})}}\;\Varid{fibd}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{prop\char95 LSystems}\;\Varid{n}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}(\length \comp \Varid{showAlgae}\comp \Varid{generateAlgae})\;\Varid{n}\equiv (\Varid{myfib}\comp \succ )\;\Varid{n}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{testLSystems}\mathrel{=}\Varid{quickCheck}\mathbin{\$}\Varid{forAll}\;\Varid{genPos}\mathbin{\$}\lambda \Varid{n}\to \Varid{prop\char95 LSystems}\;\Varid{n}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 5}
+\subsubsection*{Alinea 1}
+Para resolver a alinea 1, o grupo seguiu a secção 4.10 dos apontamentos, chegando em primeiro lugar a uma definição da função permuta:
+\begin{eqnarray*}
+\start
+
+\ensuremath{\Varid{permuta}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\Varid{id}\;[\mskip1.5mu \mskip1.5mu]}
+
+\ensuremath{\Varid{permuta}\;\Varid{l}\mathrel{=}\mathbf{let}\;((\Varid{h},\Varid{t})\mathrel{=}\Varid{getR}\;\Varid{l})\;(\Varid{res}\mathrel{=}\Varid{permuta}\;\Varid{t})\;\mathbf{in}\;\Varid{id}\;(\Varid{h}\mathbin{:}\Varid{res}))}
+
+\end{eqnarray*}
+"Monidificando" o código, obtemos a função permuta.
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{permuta}\;[\mskip1.5mu \mskip1.5mu]\mathrel{=}\Varid{return}\;[\mskip1.5mu \mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{permuta}\;\Varid{l}\mathrel{=}\mathbf{do}\;\{\mskip1.5mu {}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}(\Varid{h},\Varid{t})\leftarrow \Varid{getR}\;\Varid{l};{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{res}\leftarrow \Varid{permuta}\;\Varid{t};{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{return}\;(\Varid{h}\mathbin{:}\Varid{res}){}\<[E]%
+\\
+\>[B]{}\mskip1.5mu\}{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{Alinea 2}
+Para resolver a alinea 2, o grupo construiu o seguinte diagrama de catamorfismo:
+
+\xymatrix@C=2cm{
+  \ensuremath{\mathsf{LTree}\;\Conid{Equipa}}
+      \ar[d]_-{\ensuremath{\Varid{cataLTree}\;\Varid{g}}}
+&
+    \ensuremath{\Conid{Equipa}\mathbin{+}\mathsf{LTree}\;\Conid{Equipa}\times\mathsf{LTree}\;\Conid{Equipa}}
+           \ar[d]^{\ensuremath{\Varid{id}\mathbin{+}(\Varid{cataLTree}\;\Varid{g})}}
+           \ar[l]_-{\ensuremath{\Varid{inLTree}}}
+\\
+     \ensuremath{\Conid{Equipa}}
+&
+     \ensuremath{\Conid{Equipa}\mathbin{+}\Conid{Equipa}\times\Conid{Equipa}}
+           \ar[l]^-{\ensuremath{\Varid{g}}}
+}
+Após o diagrama, verificamos que o gene será [id,jogo]. De seguida, passamos a função eliminatoria a pointwise:
+
+\begin{eqnarray*}
+\start
+
+\ensuremath{\Varid{eliminatoria}\;(\Conid{Leaf}\;\Varid{a})\mathrel{=}\Varid{a}}
+
+\ensuremath{\Varid{eliminatoria}\;(\Conid{Fork}\;(\Varid{e},\Varid{d}))\mathrel{=}\Varid{jogo}\;(\Varid{eliminatoria}\;\Varid{e},\Varid{eliminatoria}\;\Varid{d})}
+%
+\just{\ensuremath{\mathbin{<=>}}}{Inserção de let, (1)}
+%
+\ensuremath{\Varid{eliminatoria}\;(\Conid{Leaf}\;\Varid{a})\mathrel{=}\Varid{id}\;\Varid{a}}
+
+\ensuremath{\Varid{eliminatoria}\;(\Conid{Fork}\;(\Varid{e},\Varid{d}))\mathrel{=}\mathbf{let}\;(\Varid{x},\Varid{y})\mathrel{=}(\Varid{eliminatoria}\;\Varid{e},\Varid{eliminatoria}\;\Varid{d})\;\mathbf{in}\;\Varid{jogo}\;(\Varid{x},\Varid{y})}
+\end{eqnarray*}
+Desta forma, rapidamente inserimos return no lugar de id e trocamos o let por do, chegando à definição final de eliminatoria.
 
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{permuta}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{eliminatoria}\;(\Conid{Leaf}\;\Varid{a})\mathrel{=}\Varid{return}\;\Varid{a}{}\<[E]%
+\\
+\>[B]{}\Varid{eliminatoria}\;(\Conid{Fork}\;(\Varid{e},\Varid{d}))\mathrel{=}\mathbf{do}\;\{\mskip1.5mu {}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{x}\leftarrow \Varid{eliminatoria}\;\Varid{e};{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{y}\leftarrow \Varid{eliminatoria}\;\Varid{d};{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}(\Varid{jogo}\;(\Varid{x},\Varid{y})){}\<[E]%
+\\
+\>[B]{}\mskip1.5mu\}{}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
+\subsubsection*{QuickCheck}
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{3}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{prop\char95 jog}\;\Varid{e}\mathrel{=}{}\<[E]%
+\\
+\>[B]{}\hsindent{3}{}\<[3]%
+\>[3]{}\Varid{abs}\;(\Varid{sumP}\;(\Varid{unD}\;(\Varid{quem\char95 vence}\;\Varid{equipas}))\mathbin{-}\mathrm{1})\mathbin{<}\Varid{e}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{eliminatoria}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{testJog}\;\Varid{e}\mathrel{=}\Varid{quickCheck}\;(\Varid{prop\char95 jog}\;\Varid{e}){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1427,4 +1873,3 @@ Desta forma chegamos à definição do worker, um catamorfismo de listas. Como a
 }
 
 \end{document}
-

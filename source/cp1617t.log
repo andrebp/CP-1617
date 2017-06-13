@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.9)  11 JUN 2017 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.9)  13 JUN 2017 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,21 +734,21 @@ Writing index file cp1617t.idx
 (./cp1617t.aux)
 \openout1 = `cp1617t.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 293.
-LaTeX Font Info:    ... okay on input line 293.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 293.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 294.
+LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 294.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -796,7 +796,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
 )
-Package hyperref Info: Link coloring ON on input line 293.
+Package hyperref Info: Link coloring ON on input line 294.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -806,9 +806,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 293.
-LaTeX Info: Redefining \pageref on input line 293.
-LaTeX Info: Redefining \nameref on input line 293.
+LaTeX Info: Redefining \ref on input line 294.
+LaTeX Info: Redefining \pageref on input line 294.
+LaTeX Info: Redefining \nameref on input line 294.
 
 (./cp1617t.out) (./cp1617t.out)
 \@outlinefile=\write7
@@ -843,21 +843,21 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 293.
+LaTeX Font Info:    Try loading font information for U+msa on input line 294.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 293.
+LaTeX Font Info:    Try loading font information for U+msb on input line 294.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 293.
+Package xypdf Info: Line width: 0.39998pt on input line 294.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 299.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 300.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 309.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 310.
  (./cp1617t.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
@@ -869,12 +869,12 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (9.02147pt too wide) in paragraph at lines 339--341
+Overfull \hbox (9.02147pt too wide) in paragraph at lines 340--342
 \OT1/ppl/m/n/10 Por out-ras palavras, o c[]odigo fonte e a sua documenta[][]ao 
 de-ver[]ao con-star do mesmo doc-u-mento (ficheiro). 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 342.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 343.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -891,7 +891,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 File: cp1617t_media/B-tree.jpg Graphic file (type jpg)
 
 <use cp1617t_media/B-tree.jpg>
-Package pdftex.def Info: cp1617t_media/B-tree.jpg used on input line 568.
+Package pdftex.def Info: cp1617t_media/B-tree.jpg used on input line 571.
 (pdftex.def)             Requested size: 227.62206pt x 63.2427pt.
  [4]
 \openout5 = `cp1617t.ptb'.
@@ -899,7 +899,7 @@ Package pdftex.def Info: cp1617t_media/B-tree.jpg used on input line 568.
 \openout5 = `cp1617t.ptb'.
 
 
-Overfull \hbox (44.29572pt too wide) in paragraph at lines 656--657
+Overfull \hbox (44.29572pt too wide) in paragraph at lines 659--660
 []$\OT1/cmr/m/it/9 t [] [] \OT1/cmr/m/n/9 (6\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 ([
 ] (3\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 ([] (2\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 ([]
 \OML/cmm/m/it/9 ; []\OT1/cmr/m/n/9 ))\OML/cmm/m/it/9 ; []\OT1/cmr/m/n/9 ))\OML/
@@ -912,23 +912,23 @@ cmm/m/it/9 ; [] \OT1/cmr/m/n/9 (7\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 ([]\OML/cmm/m
 File: cp1617t_media/dot1.jpg Graphic file (type jpg)
 
 <use cp1617t_media/dot1.jpg>
-Package pdftex.def Info: cp1617t_media/dot1.jpg used on input line 660.
+Package pdftex.def Info: cp1617t_media/dot1.jpg used on input line 663.
 (pdftex.def)             Requested size: 182.09486pt x 152.43845pt.
  [5 <./cp1617t_media/B-tree.jpg>]
 <cp1617t_media/dot2.jpg, id=132, 981.6675pt x 238.8925pt>
 File: cp1617t_media/dot2.jpg Graphic file (type jpg)
 
 <use cp1617t_media/dot2.jpg>
-Package pdftex.def Info: cp1617t_media/dot2.jpg used on input line 665.
+Package pdftex.def Info: cp1617t_media/dot2.jpg used on input line 668.
 (pdftex.def)             Requested size: 409.71692pt x 99.70354pt.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 694.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 697.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 694.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 697.
 \openout5 = `cp1617t.ptb'.
 
  [6 <./cp1617t_media/dot1.jpg> <./cp1617t_media/dot2.jpg>]
@@ -949,7 +949,7 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
 File: cp1617t_media/sorteio.jpg Graphic file (type jpg)
 
 <use cp1617t_media/sorteio.jpg>
-Package pdftex.def Info: cp1617t_media/sorteio.jpg used on input line 827.
+Package pdftex.def Info: cp1617t_media/sorteio.jpg used on input line 830.
 (pdftex.def)             Requested size: 455.24411pt x 117.86987pt.
 \openout5 = `cp1617t.ptb'.
 
@@ -963,9 +963,9 @@ Package pdftex.def Info: cp1617t_media/sorteio.jpg used on input line 827.
 
 (./cp1617t.bbl) [9]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 928.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 931.
 
-Overfull \hbox (1.96101pt too wide) in paragraph at lines 933--937
+Overfull \hbox (1.96101pt too wide) in paragraph at lines 936--940
 \OT1/ppl/m/n/10 M[]onades s[]ao func-tores com pro-priedades adi-cionais que no
 s per-mitem obter efeitos es-pe-ci-ais em progra-
  []
@@ -987,22 +987,18 @@ s per-mitem obter efeitos es-pe-ci-ais em progra-
 
 \openout5 = `cp1617t.ptb'.
 
-\openout5 = `cp1617t.ptb'.
 
-\openout5 = `cp1617t.ptb'.
-
- [11]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1173 
+l.1145 
        
 ? Q
 OK, entering \batchmode...
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1173 
+l.1145 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1013,7 +1009,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1173 
+l.1145 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1024,14 +1020,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.1173 
+l.1145 
        
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.1173 
+l.1145 
        
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -1040,7 +1036,7 @@ Try to go on, since this might almost work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1173 
+l.1145 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1048,7 +1044,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $$ inserted.
 <to be read again> 
                    \par 
-l.1173 
+l.1145 
        
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
@@ -1056,7 +1052,7 @@ only if nothing but the alignment itself is between $$'s.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1068,7 +1064,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1079,7 +1075,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1087,7 +1083,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1096,10 +1092,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+ [11]
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1111,7 +1108,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1123,7 +1120,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1135,7 +1132,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1147,7 +1144,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1158,7 +1155,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1166,7 +1163,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1178,7 +1175,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1178 ...,(79),(81), def succ, def nil, def cons}
+l.1150 ...th{\mathbin{<=>}}}{(27), (73),(74),(76)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1187,10 +1184,48 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.1152 ...thrm{1}\mathbin{-}\Varid{x})}\end{lcbr}}
+                                                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1152 ...thrm{1}\mathbin{-}\Varid{x})}\end{lcbr}}
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.1152 ...thrm{1}\mathbin{-}\Varid{x})}\end{lcbr}}
+                                                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1152 ...thrm{1}\mathbin{-}\Varid{x})}\end{lcbr}}
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1202,7 +1237,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1214,7 +1249,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1226,7 +1261,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1237,7 +1272,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1245,7 +1280,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1257,7 +1292,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1269,7 +1304,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1281,7 +1316,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1293,7 +1328,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1305,7 +1340,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1316,7 +1351,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1324,7 +1359,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1336,7 +1371,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1184 ...st={(76), def uncurry (and), (78), (80)}
+l.1154 ...uremath{\mathbin{<=>}}}{def-inNat, (22)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1348,8 +1383,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1360,8 +1395,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1372,8 +1407,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1384,8 +1419,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1395,16 +1430,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1415,8 +1450,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1427,8 +1462,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1439,8 +1474,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1451,8 +1486,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1463,8 +1498,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1474,16 +1509,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1494,8 +1529,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1191   \just={(73)}
-                     
+l.1158 \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1506,8 +1541,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1518,8 +1553,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1530,8 +1565,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1542,8 +1577,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1553,16 +1588,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1573,8 +1608,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1585,8 +1620,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1597,8 +1632,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1609,8 +1644,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1621,8 +1656,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1632,16 +1667,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1652,8 +1687,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1197   \just={(1),(12),(7)}
-                             
+l.1161 \just{\ensuremath{\mathbin{<=>}}}{(28)}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1664,8 +1699,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1676,8 +1711,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1688,8 +1723,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1700,8 +1735,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1711,16 +1746,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1731,8 +1766,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1743,8 +1778,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1755,8 +1790,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1767,8 +1802,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1779,8 +1814,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1790,16 +1825,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1810,8 +1845,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1203   \just={(13)}
-                     
+l.1165 \just{\ensuremath{\mathbin{<=>}}}{def for}
+                                                 
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1822,8 +1857,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1208   \just={(9)}
-                    
+l.1168 \end{eqnarray*}
+                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1834,8 +1869,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1208   \just={(9)}
-                    
+l.1168 \end{eqnarray*}
+                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1846,8 +1881,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1208   \just={(9)}
-                    
+l.1168 \end{eqnarray*}
+                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1858,8 +1893,127 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1208   \just={(9)}
-                    
+l.1168 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endeqnarray ->\@@eqncr \egroup 
+                                \global \advance \c@equation \m@ne $$\@ignor...
+l.1168 \end{eqnarray*}
+                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1168 \end{eqnarray*}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1168 \end{eqnarray*}
+                      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+\openout5 = `cp1617t.ptb'.
+
+\openout5 = `cp1617t.ptb'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1239 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1239 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1239 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1239 
+       
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1239 
+       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1239 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \par 
+l.1239 
+       
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+               
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1869,13 +2023,804 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1208   \just={(9)}
-                    
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+ [12]
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1242 ...,(79),(81), def succ, def nil, def cons}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1248 ...}}}{(76), def uncurry (and), (78), (80)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1255   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1261 ...ensuremath{\mathbin{<=>}}}{(1),(12),(7)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1267   \just{\ensuremath{\mathbin{<=>}}}{(13)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Overfull \hbox (11.75308pt too wide) in paragraph at lines 1206--1208
+Overfull \hbox (11.75308pt too wide) in paragraph at lines 1270--1272
 []$[] [] [] [] [] \OT1/cmr/m/n/10 ([][] [] []\OMS/cmsy/m/n/10 : [] [] [] \OML/c
 mm/m/it/10 ^^Y[][] [] \OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^B [][]\OML/cmm/m/i
 t/10 ; [][]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^Y[][] [] ^^Y[][] [] \OT1/cmr/m
@@ -1886,8 +2831,8 @@ t/10 ; [][]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^Y[][] [] ^^Y[][] [] \OT1/cmr/m
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1898,8 +2843,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1910,8 +2855,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1922,8 +2867,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1934,8 +2879,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1946,8 +2891,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1957,16 +2902,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1977,8 +2922,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1208   \just={(9)}
-                    
+l.1272   \just{\ensuremath{\mathbin{<=>}}}{(9)}
+                                               
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1989,8 +2934,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2001,8 +2946,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2013,8 +2958,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2025,8 +2970,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2036,16 +2981,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2056,8 +3001,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2068,8 +3013,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2080,8 +3025,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2092,8 +3037,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2104,8 +3049,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2115,16 +3060,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2135,8 +3080,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1214   \just={(32)}
-                     
+l.1278   \just{\ensuremath{\mathbin{<=>}}}{(32)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2147,7 +3092,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2159,7 +3104,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2171,7 +3116,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2183,7 +3128,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2194,7 +3139,7 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten \endgroup.
 \endeqnarray ->\@@eqncr \egroup 
                                 \global \advance \c@equation \m@ne $$\@ignor...
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2205,7 +3150,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2216,7 +3161,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.1219 \end{eqnarray*}
+l.1283 \end{eqnarray*}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2224,7 +3169,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1222 
+l.1286 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2232,7 +3177,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1222 
+l.1286 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2243,7 +3188,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1222 
+l.1286 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2254,14 +3199,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.1222 
+l.1286 
        
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.1222 
+l.1286 
        
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -2270,7 +3215,7 @@ Try to go on, since this might almost work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1222 
+l.1286 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2278,7 +3223,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $$ inserted.
 <to be read again> 
                    \par 
-l.1222 
+l.1286 
        
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
@@ -2286,8 +3231,8 @@ only if nothing but the alignment itself is between $$'s.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2298,8 +3243,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2309,16 +3254,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2329,8 +3274,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2341,8 +3286,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2353,8 +3298,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2365,8 +3310,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2377,8 +3322,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2388,16 +3333,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2408,8 +3353,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1227   \just={(81), def nil, def cons, (76)}
-                                              
+l.1289 ...in{<=>}}}{(81), def nil, def cons, (76)}
+                                                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2420,8 +3365,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2432,8 +3377,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2444,8 +3389,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2456,8 +3401,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2467,16 +3412,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2487,8 +3432,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2499,8 +3444,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2511,8 +3456,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2523,8 +3468,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2535,8 +3480,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -2546,16 +3491,16 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
                                                  {\penalty \@eqpen \vskip \j...
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2566,8 +3511,8 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1233   \just={(73)}
-                     
+l.1293   \just{\ensuremath{\mathbin{<=>}}}{(73)}
+                                                
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2575,11 +3520,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
- [12]
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                 & &
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2591,7 +3535,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& &
                   &
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2603,7 +3547,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 \reserved@a ->& & &
                    
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2615,7 +3559,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2626,7 +3570,7 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten \endgroup.
 \endeqnarray ->\@@eqncr \egroup 
                                 \global \advance \c@equation \m@ne $$\@ignor...
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2637,7 +3581,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2648,7 +3592,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.1238 \end{eqnarray*}
+l.1296 \end{eqnarray*}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2656,7 +3600,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1242 
+l.1300 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2664,7 +3608,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1242 
+l.1300 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2675,7 +3619,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1242 
+l.1300 
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2686,14 +3630,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.1242 
+l.1300 
        
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.1242 
+l.1300 
        
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -2702,7 +3646,7 @@ Try to go on, since this might almost work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1242 
+l.1300 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2710,7 +3654,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $$ inserted.
 <to be read again> 
                    \par 
-l.1242 
+l.1300 
        
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
@@ -2718,7 +3662,7 @@ only if nothing but the alignment itself is between $$'s.
 ! Misplaced alignment tab character &.
 \reserved@a ->&
                
-l.1246 \end{eqnarray*}
+l.1305 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2730,7 +3674,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.1246 \end{eqnarray*}
+l.1305 \end{eqnarray*}
                       
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2741,7 +3685,7 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten \endgroup.
 \endeqnarray ->\@@eqncr \egroup 
                                 \global \advance \c@equation \m@ne $$\@ignor...
-l.1246 \end{eqnarray*}
+l.1305 \end{eqnarray*}
                       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2752,7 +3696,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1246 \end{eqnarray*}
+l.1305 \end{eqnarray*}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2763,374 +3707,936 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.1246 \end{eqnarray*}
+l.1305 \end{eqnarray*}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1250 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1250 
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1250 
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.1250 
-       
-I'm guessing that you meant to end an alignment here.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.1250 
-       
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1250 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $$ inserted.
-<to be read again> 
-                   \par 
-l.1250 
-       
-Displays can use special alignments (like \eqalignno)
-only if nothing but the alignment itself is between $$'s.
-
-! Misplaced alignment tab character &.
-\reserved@a ->&
-               
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
-                                                  
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
-                                                 {\penalty \@eqpen \vskip \j...
-l.1256   \just={(50)}
-                     
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\just #1#2->\\ &#1&
-                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->&
-                & &
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->& &
-                  &
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->& & &
-                   
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
-                                                  
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
-                                                 {\penalty \@eqpen \vskip \j...
-l.1256   \just={(50)}
-                     
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
-                                                   
-l.1256   \just={(50)}
-                     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->&
-                & &
-l.1260 \end{eqnarray*}
-                      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->& &
-                  &
-l.1260 \end{eqnarray*}
-                      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\reserved@a ->& & &
-                   
-l.1260 \end{eqnarray*}
-                      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
-                                                  
-l.1260 \end{eqnarray*}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Extra }, or forgotten \endgroup.
-\endeqnarray ->\@@eqncr \egroup 
-                                \global \advance \c@equation \m@ne $$\@ignor...
-l.1260 \end{eqnarray*}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.1260 \end{eqnarray*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.1260 \end{eqnarray*}
-                      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-\openout5 = `cp1617t.ptb'.
 
  [13]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1309 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1309 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1309 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1309 
+       
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1309 
+       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1309 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \par 
+l.1309 
+       
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+               
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1315   \just{\ensuremath{\mathbin{<=>}}}{(50)}
+                                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1319 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1319 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1319 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1319 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endeqnarray ->\@@eqncr \egroup 
+                                \global \advance \c@equation \m@ne $$\@ignor...
+l.1319 \end{eqnarray*}
+                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1319 \end{eqnarray*}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1319 \end{eqnarray*}
+                      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+ <xymatrix 2x2 191>
 \openout5 = `cp1617t.ptb'.
 
+\openout5 = `cp1617t.ptb'.
 
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
+ <xymatrix 2x2 191>
+Underfull \hbox (badness 10000) in paragraph at lines 1392--1394
+
  []
 
+ <xymatrix 2x1 54>
 
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1402 P
+        ara chegarmos à lista final, basta aplicar a função conc, versão...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ [14] <xymatrix 2x1 54>
+Underfull \hbox (badness 10000) in paragraph at lines 1402--1413
+
  []
 
+\openout5 = `cp1617t.ptb'.
 
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
+ <xymatrix 2x2 191> <xymatrix 3x1 102>
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1447 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1447 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1447 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) detected at line 1447
+$ []$
  []
 
+ <xymatrix 3x1 102>
+\openout5 = `cp1617t.ptb'.
 
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
- []
+ <xymatrix 2x2 191> <xymatrix 3x1 102>
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1503 \[
+         \xymatrixcolsep{6pc}\xymatrix{
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ <xymatrix 2x1 54>
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1509 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1509 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1509 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
- []
-
-
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][][][] 
- []
-
-
-Overfull \hbox (166.17067pt too wide) in paragraph at lines 1362--1381
- [][] 
+Overfull \hbox (427.0795pt too wide) detected at line 1509
+$ []$
  []
 
 \openout5 = `cp1617t.ptb'.
 
 \openout5 = `cp1617t.ptb'.
 
- (./cp1617t.ind [14] [15
+ [15]
+\openout5 = `cp1617t.ptb'.
+
+\openout5 = `cp1617t.ptb'.
+
+\openout5 = `cp1617t.ptb'.
+
+ <xymatrix 2x2 191> <xymatrix 2x2 [16] 191>
+\openout5 = `cp1617t.ptb'.
+
+ <xymatrix 2x2 191> <xymatrix 2x2 191>
+\openout5 = `cp1617t.ptb'.
+
+\openout5 = `cp1617t.ptb'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1755 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1755 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1755 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1755 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1755 
+       
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1755 
+       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1755 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \@@par 
+l.1755 
+       
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.1755 
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+               
+l.1760 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1760 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endeqnarray ->\@@eqncr \egroup 
+                                \global \advance \c@equation \m@ne $$\@ignor...
+l.1760 \end{eqnarray*}
+                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1760 \end{eqnarray*}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1760 \end{eqnarray*}
+                      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+ [17]
+\openout5 = `cp1617t.ptb'.
+
+ <xymatrix 2x2 191>
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1802 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1802 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1802 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1802 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1802 
+       
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1802 
+       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1802 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $$ inserted.
+<to be read again> 
+                   \@@par 
+l.1802 
+       
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.1802 
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+               
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just #1#2->\\ &#1&
+                    \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@xeqncr [#1]->\ifnum 0=`{\fi }\@@eqncr \noalign 
+                                                 {\penalty \@eqpen \vskip \j...
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
+                                                   
+l.1807 ...{\mathbin{<=>}}}{Inserção de let, (1)}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.1812 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.1812 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.1812 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.1812 \end{eqnarray*}
+                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endeqnarray ->\@@eqncr \egroup 
+                                \global \advance \c@equation \m@ne $$\@ignor...
+l.1812 \end{eqnarray*}
+                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1812 \end{eqnarray*}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1812 \end{eqnarray*}
+                      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+\openout5 = `cp1617t.ptb'.
+
+\openout5 = `cp1617t.ptb'.
+
+ (./cp1617t.ind [18] [19
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1429.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1429.
+
+! LaTeX Error: \begin{trivlist} on input line 1493 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1875 \end{document}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1875.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1875.
  (./cp1617t.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1429.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1429.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1875.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1875.
 
 Package rerunfilecheck Info: File `cp1617t.out' has not changed.
 (rerunfilecheck)             Checksum: 5DC94B7046BAC0227E6F46C9CCE6DE02;364.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1429.
- ) 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1875.
+ )
+(\end occurred inside a group at level 2)
+
+### semi simple group (level 2) entered at line 1493 (\begingroup)
+### semi simple group (level 1) entered at line 1438 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 10236 strings out of 494953
- 140050 string characters out of 6180978
+ 10273 strings out of 494953
+ 140326 string characters out of 6180978
  288021 words of memory out of 5000000
- 13221 multiletter control sequences out of 15000+600000
- 39488 words of font info for 117 fonts, out of 8000000 for 9000
+ 13240 multiletter control sequences out of 15000+600000
+ 39787 words of font info for 118 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 32i,10n,51p,3280b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
-o/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on cp1617t.pdf (15 pages, 420737 bytes).
+ 32i,16n,43p,3280b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/couri
+er/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/xypic/xyatip10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/xypic/xybtip10.pfb>
+Output written on cp1617t.pdf (19 pages, 486621 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 322 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

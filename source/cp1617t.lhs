@@ -57,6 +57,8 @@
 %format BTree = "\fun{BTree} "
 %format LTree = "\mathsf{LTree}"
 %format (lcbr (x)(y)) = "\begin{lcbr}" x "\\" y "\end{lcbr}"
+%format (longcond (c)(t)(e)) ="\begin{array}{ll}\multicolumn{2}{l}{" c -> "}\\& " t ",\\& " e "\end{array}"
+
 %-------------- interface with pdbc.lhs ------------------------------------
 \def\monadification{4.10}
 %---------------------------------------------------------------------------
@@ -779,9 +781,7 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
 \begin{eqnarray*}
 \start
 
-  |wc_w [] = 0|
-
-  |wc_w (c:l) = if (not sep c) && lookahead_sep l then wc_w l + 1 else wc_w l|
+  |lcbr (wc_w [] = 0) (wc_w (c:l) = if (not sep c) && lookahead_sep l then wc_w l + 1 else wc_w l)|
   %
   \just{|<=>|}{(74),(76),(79),(81), def succ, def nil, def cons}
   %
@@ -830,27 +830,22 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
 \begin{eqnarray*}
 \start
 
-  |lookahead_sep [] = True|
-
-  |lookahead_sep (c:l) = sep c|
+  |lcbr (lookahead_sep [] = True) (lookahead_sep (c:l) = sep c)|
   %
   \just{|<=>|}{(81), def nil, def cons, (76)}
   %
-  |lookahead_sep . nil = (const True)|
-
-  |(lookahead_sep . cons) (c,l) = (sep . p1) (c,l)|
+  |lcbr (lookahead_sep . nil = (const True)) ((lookahead_sep . cons) (c,l) = (sep . p1) (c,l))|
   %
   \just{|<=>|}{(73)}
   %
-  |lookahead_sep . nil = (const True)|
-
-  |lookahead_sep . cons = sep . p1|
+  |lcbr (lookahead_sep . nil = (const True)) (lookahead_sep . cons = sep . p1)|
 \end{eqnarray*}
 Graças à definição de in de listas([nil,cons]),da lei 20 (Fusão +) e da lei 27 (Eq +), podemos definir cada uma das funcoes da seguinte forma:
 \begin{eqnarray*}
 \start
 
   |wc_w . in = either (const 0) (cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) . (id >< split (wc_w)(lookahead_sep)))))|
+
 
   |lookahaed_sep . in = either (const True) (sep . p1)|
 \end{eqnarray*}
@@ -1184,6 +1179,7 @@ Com base nos diagramas, verificamos que ambos os genes seriam alternativas. No l
 showAlgae = cataA (either (const "A") conc) (either (const "B") id)
 \end{code}
 
+\subsubsection*{Alinea 3}
 \begin{code}
 
 genPos :: Gen Int
@@ -1202,7 +1198,19 @@ testLSystems = quickCheck $ forAll genPos $ \n -> prop_LSystems n
 \end{code}
 
 \subsection*{Problema 5}
+\subsubsection*{Alinea 1}
+Para resolver a alinea 1, o grupo seguiu a secção 4.10 dos apontamentos, chegando em primeiro lugar a uma definição da função permuta:
+\begin{eqnarray*}
+\start
 
+|permuta [] = id []|
+
+|permuta l = let ((h,t) = getR l)
+                 (res = permuta t)
+                 in id(h:res))|
+
+\end{eqnarray*}
+"Monidificando" o código, obtemos a função permuta.
 \begin{code}
 permuta [] = return []
 permuta l = do {
@@ -1210,14 +1218,50 @@ permuta l = do {
   res <- permuta t;
   return (h:res)
 }
+\end{code}
+\subsubsection*{Alinea 2}
+Para resolver a alinea 2, o grupo construiu o seguinte diagrama de catamorfismo:
 
+\xymatrix@@C=2cm{
+  |LTree Equipa|
+      \ar[d]_-{|cataLTree g|}
+&
+    |Equipa + LTree Equipa >< LTree Equipa|
+           \ar[d]^{|id + (cataLTree g)|}
+           \ar[l]_-{|inLTree|}
+\\
+     |Equipa|
+&
+     |Equipa + Equipa >< Equipa|
+           \ar[l]^-{|g|}
+}
+Após o diagrama, verificamos que o gene será [id,jogo]. De seguida, passamos a função eliminatoria a pointwise:
+
+\begin{eqnarray*}
+\start
+
+|eliminatoria (Leaf a) = a|
+
+|eliminatoria (Fork (e,d)) = jogo(eliminatoria e, eliminatoria d)|
+%
+\just{|<=>|}{Inserção de let, (1)}
+%
+|eliminatoria (Leaf a) = id a|
+
+|eliminatoria (Fork (e,d)) = let (x,y) = (eliminatoria e, eliminatoria d) in jogo (x,y)|
+\end{eqnarray*}
+Desta forma, rapidamente inserimos return no lugar de id e trocamos o let por do, chegando à definição final de eliminatoria.
+
+\begin{code}
 eliminatoria (Leaf a) = return a
 eliminatoria (Fork (e,d)) = do{
   x <- eliminatoria e;
   y <- eliminatoria d;
   (jogo (x,y))
 }
-
+\end{code}
+\subsubsection*{QuickCheck}
+\begin{code}
 prop_jog e =
   abs (sumP (unD (quem_vence equipas))-1) < e
 
