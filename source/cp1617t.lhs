@@ -1217,6 +1217,12 @@ eliminatoria (Fork (e,d)) = do{
   y <- eliminatoria d;
   (jogo (x,y))
 }
+
+prop_jog e =
+  abs (sumP (unD (quem_vence equipas))-1) < e
+
+testJog e = quickCheck (prop_jog e)
+
 \end{code}
 
 %----------------- Fim do anexo cpm soluções propostas ------------------------%
