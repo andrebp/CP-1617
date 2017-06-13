@@ -720,22 +720,22 @@ Em primeiro lugar escrevemos a função inv em pointwise, e seguimos a sugestão
 
 |lcbr (aux x 0 = (1-x))(aux x (n+1) = (1-x)* aux x n)|
 %
-\just={(27), (73),(74),(76)}
+\just{|<=>|}{(27), (73),(74),(76)}
 %
 |lcbr ( (inv . either (const 0)(succ)) x = either (const 1) (uncurry (+) . split (inv)(aux))) ( (aux . either (const 0) (succ)) x = either (1-x) (*(1-x)))|
 %
-\just={def-inNat, (22)}
+\just{|<=>|}{def-inNat, (22)}
 %
 |lcbr ((inv . inNat) x = either (const 1) (add ) . F(split (inv)(aux)))((aux . inNat) x = either (1-x) (*(1-x) . p2 ) . F(split inv aux))|
 %
-\just={(50)}
+\just{|<=>|}{(50)}
 |(split (inv) (aux)) x = cataNat (split (either (const 1) (uncurry (+))) (either (1-x) ( (*(1-x)).p2 )) ) |
 %
-\just={(28)}
+\just{|<=>|}{(28)}
 %
 |(split inv aux) x = cataNat (either (split (const 1) (1-x) ) (split (uncurry (+)) ((*(1-x)) . p2) ) )|
 %
-\just={def for}
+\just{|<=>|}{def for}
 %
 |(split inv aux) x = for(split(uncurry (+)) ((*(1-x)). p2)) (1,(1-x))|
 \end{eqnarray*}
@@ -783,7 +783,7 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
 
   |wc_w (c:l) = if (not sep c) && lookahead_sep l then wc_w l + 1 else wc_w l|
   %
-  \just={(74),(76),(79),(81), def succ, def nil, def cons}
+  \just{|<=>|}{(74),(76),(79),(81), def succ, def nil, def cons}
   %
   |(wc_w . nil) x = (const 0) x|
 
@@ -791,37 +791,37 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
                          then (succ . wc_w . p2) (c,l)
                          else (wc_w . p2) (c,l)|
   %
-  \just={(76), def uncurry (and), (78), (80)}
+  \just{|<=>|}{(76), def uncurry (and), (78), (80)}
   %
   |(wc_w . nil) = (const 0)|
 
   |(wc_w . cons) (c,l) = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2)) (c,l)|
 
   %
-  \just={(73)}
+  \just{|<=>|}{(73)}
   %
   |wc_w . nil = (const 0)|
 
   |wc_w . cons = cond(uncurry (&&) . split (not . sep . p1) (lookahead_sep . p2) (succ . wc_w . p2) (wc_w . p2))|
   %
-  \just={(1),(12),(7)}
+  \just{|<=>|}{(1),(12),(7)}
   %
   |wc_w . nil = (const 0)|
 
   |wc_w . cons = cond (uncurry (&&) . split (not . sep . p1 . (id >< split (wc_w) (lookahead_sep)) ) (p2. split(wc_w)(lookahead_sep) .p2) (succ . p1 . split (wc_w)(lookahead_sep). p2) (p1. split wc_w lookahead_sep . p2))|
   %
-  \just={(13)}
+  \just{|<=>|}{(13)}
   |wc_w . nil = (const 0)|
 
   |wc_w . cons = cond (uncurry (&&) . split (not . sep .p1 . (id >< split (wc_w) (lookahead_sep))) (p2. p2 . (id >< split (wc_w) (lookahead_sep))) (succ . p1 . p2 . (id >< split (wc_w)(lookahead_sep))) (p1 . p2 . (id >< split (wc_w)(lookahead_sep))))|
   %
-  \just={(9)}
+  \just{|<=>|}{(9)}
   %
   |wc_w . nil = (const 0)|
 
   |wc_w . cons = cond( uncurry (&&) . (split (not . sep . p1)(p2 . p2) . (id >< split (wc_w)(lookahead_sep))) (succ.p1.p2.(id><split(wc_w)(lookahead_sep))) (p1.p2.(id><split(wc_w)(lookahead_sep))))|
   %
-  \just={(32)}
+  \just{|<=>|}{(32)}
   %
   |wc_w . nil = (const 0)|
 
@@ -834,13 +834,13 @@ Em primeiro lugar, começamos por definir as funções \emph{wc\_w} e \emph{look
 
   |lookahead_sep (c:l) = sep c|
   %
-  \just={(81), def nil, def cons, (76)}
+  \just{|<=>|}{(81), def nil, def cons, (76)}
   %
   |lookahead_sep . nil = (const True)|
 
   |(lookahead_sep . cons) (c,l) = (sep . p1) (c,l)|
   %
-  \just={(73)}
+  \just{|<=>|}{(73)}
   %
   |lookahead_sep . nil = (const True)|
 
@@ -863,14 +863,29 @@ Por fim, como o Functor de listas é do tipo 1 + X, aplicamos a lei 50 (Fokkinga
   |lookahaed_sep . in = either (const True) (sep . p1) . (id >< split (wc_w)(lookahead_sep))|
 
   %
-  \just={(50)}
+  \just{|<=>|}{(50)}
   %
   |split (wc_w) (lookahead_sep) = cataList( split ( either (const 0) (cond ( uncurry(&&) . (split(not. sep . p1)(p2.p2) (succ. p1 . p2)(p1 . p2) ))) ) (either (const True) (sep . p1)) )|
 
 \end{eqnarray*}
 Desta forma chegamos à definição do worker, um catamorfismo de listas. Como apenas nos interessa o primeiro elemento do par, a função wrapper seleciona apenas o primeiro elemento, ficando assim com a definição de wc w final.
 \subsection*{Problema 3}
+Em primeiro lugar, começamos por construir o diagrama de um cataB\_tree para construir a biblioteca do tipo.
 
+\xymatrix@@C=2cm{
+    |B_tree A|
+           \ar[d]_-{|cataB_tree g|}
+&
+    |1 + B_tree A >< (A >< B_tree A)|^*
+           \ar[d]^{| id + cataB_tree g >< (map(id >< cataB_tree g))|}
+           \ar[l]_-{|inB_tree|}
+\\
+     |B|
+&
+     |1 + B >< (A >< B)|^*
+           \ar[l]^-{|g|}
+}
+\subsubsection*{Alinea 1}
 \begin{code}
 inB_tree :: Either () (B_tree a, [(a, B_tree a)]) -> B_tree a
 inB_tree = either (const Nil) (uncurry Block)
@@ -887,21 +902,155 @@ cataB_tree g = g . recB_tree(cataB_tree g) . outB_tree
 anaB_tree g = inB_tree . recB_tree(anaB_tree g) . g
 
 hyloB_tree f g = cataB_tree f . anaB_tree g
+\end{code}
 
+Para definir o fmap para B\_tree, usamos a lei 47, Def-map-cata.
+
+\begin{code}
 instance Functor B_tree
          where fmap f = cataB_tree ( inB_tree . baseB_tree f id )
+\end{code}
 
+\subsubsection*{Alinea 2}
+Para chegarmos à definição de inordB\_tree, construimos o diagrama de catamorfismos:
+
+\xymatrix@@C=2cm{
+    |B_tree A|
+           \ar[d]_-{|cataB_tree g|}
+&
+    |1 + B_tree A >< (A >< B_tree A)|^*
+           \ar[d]^{| id + cataB_tree g >< (map(id >< cataB_tree g))|}
+           \ar[l]_-{|inB_tree|}
+\\
+     |A|^*
+&
+     |1 + A|^*| >< (A >< A|^*|)|^*
+           \ar[l]^-{|g|}
+}
+
+
+No caso da árvore vazia, geramos a lista vazia. No outro caso:
+\\
+
+\xymatrix@@C=2cm{
+  |(A >< A|^*|)|^*
+            \ar[r]_-{|concat . map cons|}
+&
+  |A|^*            
+}
+\\
+Para chegarmos à lista final, basta aplicar a função conc, versão uncurried da função (++).
+\\
+\xymatrix@@C=2cm{
+  |A|^*|>< A|^*
+            \ar[r]_-{|uncurry (++)|}
+&
+  |A|^*            
+}
+\\
+Por fim chegamos à definição de inordB\_tree.
+\\
+\begin{code}
 inordB_tree = cataB_tree (either nil (conc . (id >< (concat . map cons))))
+\end{code}
+\subsubsection*{Alinea 3}
+Para fazermos a função largestBlock, fizemos um diagrama de catamorfismos.
 
+\xymatrix@@C=2cm{
+    |B_tree A|
+           \ar[d]_-{|cataB_tree g|}
+&
+    |1 + B_tree A >< (A >< B_tree A)|^*
+           \ar[d]^{| id + cataB_tree g >< (map(id >< cataB_tree g))|}
+           \ar[l]_-{|inB_tree|}
+\\
+     |Int|
+&
+     |1 + Int >< (A >< Int)|^*
+           \ar[l]^-{|g|}
+}
+
+Para chegarmos à definição do gene, fomos por partes. A primeira foi obter apenas uma lista com apenas o segundo elemento do par. Depois, criar um par com o tamanho dessa lista e o valor do maior elemento da lista. Por fim, guardar o maior dos dois.
+
+\[\xymatrixcolsep{10pc}\xymatrix{
+  |A >< Int|^*
+            \ar[r]^-{|map p2|}
+&
+  |Int|^*
+    \ar[r]^-{| uncurry max . <length,maximum>|}            
+&
+  |Int|
+}
+
+
+Definindo a função anterior como f:
+\\
+\xymatrix@@C=2cm{
+  |1 + Int >< (A >< Int)|^*
+            \ar[r]^-{|id + id >< f|}
+&
+  |1 + Int >< Int|
+            \ar[r]^-{|[(const 0),uncurry max]|}            
+&
+  |Int|
+}
+
+Chegando assim à definição do gene do catamorfismo.
+\begin{code}
 largestBlock = cataB_tree (either (const 0)  (uncurry max) . (id -|- id >< f))
                where f = (uncurry max) . (split length maximum) . (map p2)
+\end{code}
+\subsubsection*{Alinea 4}
+Para chegar à definição de mirrorB\_tree, construimos um diagrama de anamorfismos.
+\\
+\xymatrix@@C=2cm{
+    |B_tree A|
+           \ar[d]_-{|anaB_tree g|}
+           \ar[r]_-{|g|}
+&
+    |1 + B_tree A >< (A >< B_tree A)|^*
+           \ar[d]^{| id + anaB_tree g >< (map(id >< anaB_tree g))|}
+\\
+     |B_tree A|
+&
+     |1 + B_tree A >< (A >< B_tree A)|^*
+           \ar[l]^-{|inB_tree|}
+}
+\\
+O gene do anamorfismo é representado nos seguintes diagramas:
 
+\[\xymatrixcolsep{6pc}\xymatrix{
+  |B_tree A|
+    \ar[r]^-{|outB_tree|}
+&
+  |1 + B_tree A >< (A >< B_tree A)|^*
+    \ar[r]^-{|id + id >< (unzip . reverse)|}
+&
+  |1 + B_tree A >< ((A)|^*| >< (B_tree A)|^*|)|   
+}
+\\
+\[\xymatrixcolsep{6pc}\xymatrix{
+  |1 + B_tree A >< ((A)|^*| >< (B_tree A)|^*|)|   
+    \ar[r]^-{id + (g .f)}
+&
+  |1 + B_tree A >< (A >< B_tree A)|^*    
+}
+
+
+Chegando à definição final de mirrorB\_tree.
+
+\begin{code}
 mirrorB_tree = anaB_tree ((id -|- ( (g . f) . (id >< (unzip . reverse)) ) ). outB_tree)
                where
                 f (a , ([],[])) = (a,([],[]))
                 f (a , (l, (h:t))) = (h,(l, t++[a]))
                 g  = (id >< ( uncurry zip))
 
+\end{code}
+\subsubsection*{Alinea 5}
+Para a definir o quick sort de B\_tree, faltava definir o gene do anamorfismo. Com base nas dicas dadas pelo professor, chegamos à conclusão que a função tem 3 casos, o de lista vazia, o de lista singular ou lista com mais de 1 elemento. Com o uso da função filter, conseguimos a definição de lsplitB\_tree, que analisa os dois elementos à cabeça da lista, e filtra os restantes elementos da lista para as respetivas posições.
+
+\begin{code}
 lsplitB_tree [] = Left ()
 lsplitB_tree [h] = Right ([],[(h,[])])
 lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
@@ -912,7 +1061,11 @@ lsplitB_tree (h1:h2:t) = Right( ( l , [(a,tMin) , (b,tMax)]) )
 
 qSortB_tree :: Ord t => [t] -> [t]
 qSortB_tree = inordB_tree . anaB_tree lsplitB_tree
+\end{code}
+\subsubsection*{Alinea 6}
+Para a definição de dotB\_tree, verificamos como era feito para as BTrees, sendo o funcionamento semelhante.
 
+\begin{code}
 dotB_tree :: Show a => B_tree a -> IO ExitCode
 dotB_tree = dotpict . bmap nothing (Just . show) . cB_tree2Exp
 
@@ -921,6 +1074,10 @@ cB_tree2Exp = cataB_tree (either (const (Var "nil")) (f . (id >< unzip)))
                 f = (uncurry Term) . (((id >< cons) . assocr . (swap >< id) . assocl))
               --f (a,(b,c)) = Term b (a:c)
 
+\end{code}
+\subsubsection*{Quickcheck}
+Fizemos ainda alguns testes para verificar se as funções que definimos estavam correctas.
+\begin{code}
 checkList xs = and $ zipWith (<=) xs $ tail xs
 
 prop_ord l =
@@ -933,7 +1090,7 @@ prop_mirror l =
 \end{code}
 
 \subsection*{Problema 4}
-
+\subsubsection*{Alinea 1}
 Tendo em conta as definições dos catamorfismos dadas e dos functores, definir os anamorfismos correspondentes é uma tarefa bastante simples: 
 
 \begin{code}
@@ -950,6 +1107,7 @@ anaB :: (c -> Either Null (Prod c d)) -> (d -> Either Null c) -> d -> B
 anaB ga gb = inB . (recB (anaA ga gb)) . gb
 
 \end{code}
+\subsubsection*{Alinea 2}
 Para resolvermos a generateAlgae construimos os dois diagramas:
 
 
