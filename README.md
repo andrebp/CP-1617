@@ -1,1 +1,1 @@
-Group 33
+Project for Cálculo de Programas, with several problems solved using point free Haskell. 
